@@ -39,9 +39,10 @@
   flex-direction: column;
   justify-content: flex-start;
   margin-top: 3rem;
+  margin-bottom:1rem;
   align-items: center;
   width: 50%;
-  height: 100vh;
+  /* height: 100vh; */
 }
 .typing {
   height: 100%;
