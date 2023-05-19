@@ -29,7 +29,7 @@
 .result-text {
   display: flex;
   width: 140%;
-  height: 20%;
+  /* height: 20%; */
   border: 2px solid #333333;
   background-color: #ffffff;
   padding: 1rem;
