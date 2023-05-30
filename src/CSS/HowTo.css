@@ -1,0 +1,19 @@
+.closeBtn{
+  padding: 1px;
+  border: none;
+  color:gray;
+  margin-right:2rem;
+
+}
+.closeBtn:hover{
+  background-color: #ffdc60;
+}
+.alert{
+background-color: #ffdc60;
+width:60%;
+border:1px solid black;
+}
+.hide{
+  display:none;
+}
+

@@ -1,0 +1,29 @@
+.Log,.register{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top:2px solid black;
+  padding-top:5rem;
+}
+.login,.register{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.login input,.register input{
+  width:40rem;
+  height: 4rem;
+  margin:15px;
+  border:2px solid black;
+
+
+}
+.loginBtn,.registerBtn {
+  width: 40rem;
+  height: 4rem;
+  margin: 1rem;
+  background-color: #ffdc60;
+}

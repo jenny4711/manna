@@ -77,13 +77,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40%;
+  /* width: 40%; */
 }
 .form h1 {
   margin-right: 27rem;
 }
 .Form-form input,
 label {
+ 
   width: 50rem;
   height: 4rem;
 
@@ -143,14 +144,42 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 /* Navb.js */
 .container {
+  
   justify-content: flex-start;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  
 }
 .navbar {
   margin-right: 26rem;
+ 
 }
-@media (max-width: 768px) {
+.justify-content-end{
+  margin-left:100%;
+}
+/* Gpt.js */
+.HowTo{
+  display:flex;
+  justify-content: center;
+  
+}
+.btns{
+  display:flex;
+  flex-direction: row;
+
+}
+.btns button{
+  width:20rem;
+  
+  
+}
+.remove{
+  margin-left:2rem ;
+}
+.History_h3{
+  margin-top:3rem;
+}
+@media (max-width: 1100px) {
   .form {
     border-bottom: #ffffff;
   }
@@ -163,6 +192,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   }
   .Form-form {
     width: 100vw;
+   
   }
   .Form-form input,
   label,
@@ -170,6 +200,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   .result button {
     width: 20rem;
     margin-bottom: 1rem;
+    
   }
   .result-text {
     height: 100vh;
@@ -181,4 +212,10 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   .form button {
     width: 20rem;
   }
+
+.btns button{
+  width:9.1rem;
+  margin-right:1rem;
+  
+}
 }

@@ -1,0 +1,17 @@
+.History_ul {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+ 
+}
+.History_ul li{
+  border:2px solid black;
+  width:75%;
+  padding:2rem;
+  margin:2rem;
+}
+.hide{
+  display:none;
+}

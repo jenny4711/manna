@@ -2,117 +2,48 @@ import Navb from "./Pages/Navb";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import React, { useState } from "react";
-import { Configuration, OpenAIApi } from "openai";
-import Form from "./Pages/Form";
-import { CopyToClipboard } from "react-copy-to-clipboard";
-import ClipLoader from "react-spinners/ClipLoader";
 
-const API_KEY = process.env.REACT_APP_API_KEY;
-console.log(API_KEY)
-const configuration = new Configuration({
-  organization:"org-M0tqNswpAzRLS33QUaLIjilO",
-  apiKey:API_KEY,
-});
-const openai = new OpenAIApi(configuration);
+import Log from "./Pages/Log";
+import Register from "./Pages/Register";
+import History from "./Pages/History";
+import { Route, Routes } from "react-router-dom";
+import ClipLoader from "react-spinners/ClipLoader";
+import useLocalStorage from "./useLocalStorage";
+import Gpt from "./Pages/Gpt";
+
+// about history
+// make post api in redux (post received msg from gpt)
+// make function to put user_id to post history
+// connect gpt with post history redux function
 
 function App() {
-  const [message, setMessage] = useState("");
-  const [chats, setChats] = useState([]);
-  const [isTyping, setIsTyping] = useState(false);
-  const [form, setForm] = useState({});
+  const [token, setToken] = useLocalStorage("token", "");
+  const [login, setLogin] = useState(false);
+  const [msg, setMsg] = useState("");
+  const [user, setUser] = useState([]);
+  const [show,setShow]=useState(false);
 
-  const handleChange = () => {
-    setMessage(`You are promotion post creator. 
-       create a 'Facebook' promotion post. 
-       The business name is ${form.name}, 
-       Promotion is ${form.amt} , 
-       Promotion item is ${form.item}, 
-       Starting date ${form.start_date},
-       Starting time is ${form.start_time},
-        Until ${form.end_date},
-         ${form.end_time}  `);
-  };
-
-  const handleFormChange = (fieldName, value) => {
-    setForm((prevForm) => ({
-      ...prevForm,
-      [fieldName]: value,
-    }));
-  };
-
-  const chat = async (e, message) => {
-    e.preventDefault();
-    setIsTyping(true);
-    let msgs = chats;
-    setMessage({ role: "user", content: message });
-    setChats(msgs);
-    setMessage("");
-    await openai
-      .createChatCompletion({
-        model: "gpt-3.5-turbo",
-        messages: [
-          {
-            role: "system",
-            content: message,
-          },
-          ...chats,
-        ],
-      })
-      .then((result) => {
-        msgs.push(result.data.choices[0].message);
-        setChats(msgs);
-        setIsTyping(false);
-      })
-      .catch((error) => console.log(error));
-  };
-  const copyText = () => {
-    alert("Copied");
+  const logOut = () => {
+    setLogin(false);
+    setToken("");
   };
 
   return (
     <div className="App">
-      <Navb />
-      <div className="App-div">
-        <section className="result">
-          {isTyping ? (
-            <div className="typing">
-              <ClipLoader
-                color="gray"
-                loading={isTyping}
-                size={100}
-                aria-label="Loading Spinner"
-                data-testid="loader"
-              />
-            </div>
-          ) : (
-            ""
-          )}
-          {chats && chats.length
-            ? chats.map((ch, idx) => (
-                <div className="result-div">
-                  <p className="result-text" key={idx}>
-                    <span>{ch.content}</span>
-                  </p>
-                  <CopyToClipboard text={ch.content}>
-                    <button
-                      onClick={() => copyText()}
-                      className={chats.length > 0 ? "" : "hide"}
-                    >
-                      {" "}
-                      Copy
-                    </button>
-                  </CopyToClipboard>
-                </div>
-              ))
-            : ""}
-        </section>
-
-        <form className="form" onSubmit={(e) => chat(e, message)}>
-          <h1>Campaign generator</h1>
-          <Form setForm={handleFormChange} />
-          <button onClick={handleChange}>Generate</button>
-        </form>
-      </div>
+      <Navb login={login} show={show} setShow={setShow} logOut={logOut} />
+      <Routes>
+        <Route path="/" element={<Gpt />} />
+        <Route
+          path="/:email"
+          element={<Gpt setMsg={setMsg} setUser={setUser} show={show} setShow={setShow} login={login} />}
+        />
+        <Route path="/register" element={<Register />} />
+        <Route
+          path="/login"
+          element={<Log login={login} setLogin={setLogin} />}
+        />
+        {/* <Route path='/history/:email' element={<History user={user} setUser={setUser}/>}/> */}
+      </Routes>
     </div>
   );
 }
