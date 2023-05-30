@@ -21,9 +21,10 @@ function App() {
   const [login, setLogin] = useState(false);
   const [msg, setMsg] = useState("");
   const [user, setUser] = useState([]);
+  const [form, setForm] = useState({});
   
   const [show,setShow]=useState(false);
-
+console.log(form,'dd')
   const logOut = () => {
     setLogin(false);
     setToken("");
@@ -31,12 +32,12 @@ function App() {
 
   return (
     <div className="App">
-      <Navb  login={login} show={show} setShow={setShow} logOut={logOut} />
+      <Navb setForm={setForm} login={login} show={show} setShow={setShow} logOut={logOut} />
       <Routes>
         <Route path="/" element={<Gpt />} />
         <Route
           path="/:email"
-          element={<Gpt setMsg={setMsg} setUser={setUser} show={show} setShow={setShow} login={login} />}
+          element={<Gpt form={form} setForm={setForm} setMsg={setMsg} setUser={setUser} show={show} setShow={setShow} login={login} />}
         />
         <Route path="/register" element={<Register />} />
         <Route

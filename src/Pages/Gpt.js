@@ -1,7 +1,7 @@
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { Configuration, OpenAIApi } from "openai";
 import History from './History';
 import { CopyToClipboard } from "react-copy-to-clipboard";
@@ -10,7 +10,7 @@ import Form from './Form';
 import HowTo from '../HowTo';
 import { useDispatch, useSelector } from "react-redux";
 import { gptAction } from '../redux/actions/msgAction';
-import { useParams } from 'react-router-dom'
+// import { useParams } from 'react-router-dom'
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -20,7 +20,7 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-function Gpt({show,setShow,login}) {
+function Gpt({form,setForm,show,setShow,login}) {
   let sample={
     user_id:"",
     msg:""
@@ -28,7 +28,7 @@ function Gpt({show,setShow,login}) {
   const [message, setMessage] = useState("");
   const [chats, setChats] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
-  const [form, setForm] = useState({});
+  // const [form, setForm] = useState({});
   const {msgs,info,user}=useSelector((state)=>state.gpt)
   const [getInfo,setGetInfo]=useState(null)
   const [item,setItem]=useState(sample)
@@ -48,6 +48,8 @@ function Gpt({show,setShow,login}) {
        Starting time is ${form.start_time},
         Until ${form.end_date},
          ${form.end_time}  `);
+        
+      
          
   };
 

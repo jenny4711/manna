@@ -4,28 +4,35 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import "../App.css";
 import { useDispatch, useSelector } from "react-redux";
+import { gptAction } from '../redux/actions/msgAction';
+import { useNavigate } from 'react-router-dom';
 
-const Navb = ({login,show,setShow,logOut}) => {
-  const {msgs,info,user}=useSelector((state)=>state.gpt)
+
+const Navb = ({setForm,login,show,setShow,logOut}) => {
+  const {info,user}=useSelector((state)=>state.gpt)
+const navigate = useNavigate()
+const dispatch = useDispatch()
   console.log(info,'infonav')
   console.log(user,'usernav')
+
 console.log(login)
   const logOutKey = (e)=>{
     if(e.target.className === "logout"){
       logOut()
-      console.log(e.target)
+     
     }
   }
+  https://6467eed7016825000790c0f5--remarkable-shortbread-919059.netlify.app/
 
   const showHistory=(e)=>{
     e.preventDefault()
     setShow((s)=>(s ===true?false:true))
-    console.log(show)
+   
   }
   return (
     <Navbar>
       <Container>
-        <Navbar.Brand href="/:email">
+        <Navbar.Brand href='/' >
           <img src='./img/manna.png'/>
         </Navbar.Brand>
         <Navbar.Toggle />
