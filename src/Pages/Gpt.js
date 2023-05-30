@@ -13,7 +13,7 @@ import { gptAction } from '../redux/actions/msgAction';
 import { useParams } from 'react-router-dom'
 
 const API_KEY = process.env.REACT_APP_API_KEY;
-// console.log(API_KEY)
+
 const configuration = new Configuration({
   organization:"org-M0tqNswpAzRLS33QUaLIjilO",
   apiKey:API_KEY,

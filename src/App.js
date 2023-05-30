@@ -21,6 +21,7 @@ function App() {
   const [login, setLogin] = useState(false);
   const [msg, setMsg] = useState("");
   const [user, setUser] = useState([]);
+  
   const [show,setShow]=useState(false);
 
   const logOut = () => {
@@ -30,7 +31,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navb login={login} show={show} setShow={setShow} logOut={logOut} />
+      <Navb  login={login} show={show} setShow={setShow} logOut={logOut} />
       <Routes>
         <Route path="/" element={<Gpt />} />
         <Route

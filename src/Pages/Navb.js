@@ -3,10 +3,12 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import "../App.css";
-
+import { useDispatch, useSelector } from "react-redux";
 
 const Navb = ({login,show,setShow,logOut}) => {
-
+  const {msgs,info,user}=useSelector((state)=>state.gpt)
+  console.log(info,'infonav')
+  console.log(user,'usernav')
 console.log(login)
   const logOutKey = (e)=>{
     if(e.target.className === "logout"){
