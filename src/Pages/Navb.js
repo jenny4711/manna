@@ -23,7 +23,7 @@ console.log(login)
   return (
     <Navbar>
       <Container>
-        <Navbar.Brand href="/">
+        <Navbar.Brand href="/:email">
           <img src='./img/manna.png'/>
         </Navbar.Brand>
         <Navbar.Toggle />
