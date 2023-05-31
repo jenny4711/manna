@@ -28,7 +28,7 @@ function Gpt({form,setForm,show,setShow,login}) {
   const [message, setMessage] = useState("");
   const [chats, setChats] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
-  // const [form, setForm] = useState({});
+ 
   const {msgs,info,user}=useSelector((state)=>state.gpt)
   const [getInfo,setGetInfo]=useState(null)
   const [item,setItem]=useState(sample)
@@ -48,6 +48,9 @@ function Gpt({form,setForm,show,setShow,login}) {
        Starting time is ${form.start_time},
         Until ${form.end_date},
          ${form.end_time}  `);
+
+         
+    
         
       
          
@@ -59,6 +62,7 @@ function Gpt({form,setForm,show,setShow,login}) {
       [fieldName]: value,
     }));
 
+  
   };
 
   const chat = async (e, message) => {

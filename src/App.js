@@ -22,6 +22,7 @@ function App() {
   const [msg, setMsg] = useState("");
   const [user, setUser] = useState([]);
   const [form, setForm] = useState({});
+  console.log(user,'user')
   
   const [show,setShow]=useState(false);
 console.log(form,'dd')

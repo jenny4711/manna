@@ -22,7 +22,16 @@ console.log(login)
      
     }
   }
-  // https://6467eed7016825000790c0f5--remarkable-shortbread-919059.netlify.app/
+  const forLogin=(e)=>{
+    e.preventDefault()
+    if(login){
+      dispatch(gptAction.login(info))
+      
+     
+    }else{
+      navigate('/')
+    }
+  }
 
   const showHistory=(e)=>{
     e.preventDefault()
@@ -32,7 +41,7 @@ console.log(login)
   return (
     <Navbar>
       <Container>
-        <Navbar.Brand href='/' >
+        <Navbar.Brand href='#home' onClick={(e)=>forLogin(e)}>
           <img src='./img/manna.png'/>
         </Navbar.Brand>
         <Navbar.Toggle />
