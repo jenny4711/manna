@@ -19,17 +19,17 @@ function Form({ setForm,form }) {
         <input type="text" name="item" value={form.item} onChange={handleInputChange} />
       </label>
       <label data-domain="Starting Date">
-        <input type="date" name="start_date" value={form.data} onChange={handleInputChange} />
+        <input type="date" name="start_date" value={form.start_data} onChange={handleInputChange} />
       </label>
       <label data-domain="Starting Time">
-        <input type="time" name="start_time" value={form.time} onChange={handleInputChange} />
+        <input type="time" name="start_time" value={form.start_time} onChange={handleInputChange} />
         
       </label>
       <label data-domain="Ending Date">
-        <input type="date" name="end_date" value={form.data} onChange={handleInputChange} />
+        <input type="date" name="end_date" value={form.end_data} onChange={handleInputChange} />
       </label>
       <label data-domain="Ending Time">
-        <input type="time" name="end_time" value={form.time} onChange={handleInputChange} />
+        <input type="time" name="end_time" value={form.end_time} onChange={handleInputChange} />
       </label>
     </div>
   );

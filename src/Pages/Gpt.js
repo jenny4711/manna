@@ -18,11 +18,21 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-function Gpt({ form, setForm, show, setShow, login }) {
+function Gpt({  show, setShow, login }) {
   let sample = {
     user_id: "",
     msg: "",
   };
+
+  const [form, setForm] = useState({
+    name: "",
+    amt: "",
+    item: "",
+    start_date: "",
+    start_time: "",
+    end_date: "",
+    end_time: "",
+  });
   
   const [message, setMessage] = useState("");
   const [chats, setChats] = useState([]);
