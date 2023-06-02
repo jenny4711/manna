@@ -21,11 +21,19 @@ function App() {
   const [login, setLogin] = useState(false);
   const [msg, setMsg] = useState("");
   const [user, setUser] = useState([]);
-  const [form, setForm] = useState({});
+  const [form, setForm] = useState({
+    name: "",
+    amt: "",
+    item: "",
+    start_date: "",
+    start_time: "",
+    end_date: "",
+    end_time: "",
+  });
   console.log(user,'user')
   
   const [show,setShow]=useState(false);
-console.log(form,'dd')
+
   const logOut = () => {
     setLogin(false);
     setToken("");
@@ -45,7 +53,7 @@ console.log(form,'dd')
           path="/login"
           element={<Log login={login} setLogin={setLogin} />}
         />
-        {/* <Route path='/history/:email' element={<History user={user} setUser={setUser}/>}/> */}
+       
       </Routes>
     </div>
   );

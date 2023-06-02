@@ -1,42 +1,37 @@
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { Configuration, OpenAIApi } from "openai";
-import History from './History';
+import History from "./History";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import ClipLoader from "react-spinners/ClipLoader";
-import Form from './Form';
-import HowTo from '../HowTo';
+import Form from "./Form";
+import HowTo from "../HowTo";
 import { useDispatch, useSelector } from "react-redux";
-import { gptAction } from '../redux/actions/msgAction';
-// import { useParams } from 'react-router-dom'
+import { gptAction } from "../redux/actions/msgAction";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 const configuration = new Configuration({
-  organization:"org-M0tqNswpAzRLS33QUaLIjilO",
-  apiKey:API_KEY,
+  organization: "org-M0tqNswpAzRLS33QUaLIjilO",
+  apiKey: API_KEY,
 });
 const openai = new OpenAIApi(configuration);
 
-function Gpt({form,setForm,show,setShow,login}) {
-  let sample={
-    user_id:"",
-    msg:""
-  }
+function Gpt({ form, setForm, show, setShow, login }) {
+  let sample = {
+    user_id: "",
+    msg: "",
+  };
+  
   const [message, setMessage] = useState("");
   const [chats, setChats] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
- 
-  const {msgs,info,user}=useSelector((state)=>state.gpt)
-  const [getInfo,setGetInfo]=useState(null)
-  const [item,setItem]=useState(sample)
-  const dispatch=useDispatch()
- 
 
- 
-
+  const { msgs, info, user } = useSelector((state) => state.gpt);
+  const [getInfo, setGetInfo] = useState(null);
+  const [item, setItem] = useState(sample);
+  const dispatch = useDispatch();
 
   const handleChange = () => {
     setMessage(`You are promotion post creator. 
@@ -49,10 +44,16 @@ function Gpt({form,setForm,show,setShow,login}) {
         Until ${form.end_date},
          ${form.end_time}  `);
 
-         
-    
-        
-      
+         setForm({
+          name: "",
+          amt: "",
+          item: "",
+          start_date: "",
+          start_time: "",
+          end_date: "",
+          end_time: "",
+         })
+
          
   };
 
@@ -61,8 +62,6 @@ function Gpt({form,setForm,show,setShow,login}) {
       ...prevForm,
       [fieldName]: value,
     }));
-
-  
   };
 
   const chat = async (e, message) => {
@@ -72,9 +71,6 @@ function Gpt({form,setForm,show,setShow,login}) {
     setMessage({ role: "user", content: message });
     setChats(msgs);
 
-
-   
-   
     setMessage("");
     await openai
       .createChatCompletion({
@@ -90,33 +86,26 @@ function Gpt({form,setForm,show,setShow,login}) {
       .then((result) => {
         msgs.push(result.data.choices[0].message);
         setChats(msgs);
-       
-        
+
         setIsTyping(false);
       })
       .catch((error) => console.log(error));
   };
-  
+
   const copyText = () => {
-   
-  alert("Copied")
-   dispatch(gptAction.postMsg(user.id,chats[0].content))
-   dispatch(gptAction.getMsg(info.email))
-  
-   
+    alert("Copied");
+    dispatch(gptAction.postMsg(user.id, chats[0].content));
+    dispatch(gptAction.getMsg(info.email));
   };
 
- 
- 
   return (
     <>
-     
       <div className="App-div">
         <section className="result">
-          <div className='HowTo'>
-          <HowTo login={login}/>
+          <div className="HowTo">
+            <HowTo login={login} />
           </div>
-             
+
           {isTyping ? (
             <div className="typing">
               <ClipLoader
@@ -146,17 +135,16 @@ function Gpt({form,setForm,show,setShow,login}) {
                     </button>
                   </CopyToClipboard>
                 </div>
-                
               ))
             : ""}
-            <div className={!show?'hide':'gpt_history'}>
-              <History msgs={msgs} setShow={setShow} info={info}/>
-            </div>
+          <div className={!show ? "hide" : "gpt_history"}>
+            <History msgs={msgs} setShow={setShow} info={info} />
+          </div>
         </section>
 
         <form className="form" onSubmit={(e) => chat(e, message)}>
           <h1>Campaign generator</h1>
-          <Form setForm={handleFormChange} />
+          <Form setForm={handleFormChange} form={form}/>
           <button onClick={handleChange}>Generate</button>
         </form>
       </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../App.css";
-function Form({ setForm }) {
+function Form({ setForm,form }) {
   const handleInputChange = (e) => {
     const fieldName = e.target.name;
     const value = e.target.value;
@@ -10,26 +10,26 @@ function Form({ setForm }) {
   return (
     <div className="Form-form">
       <label data-domain="BusinessName">
-        <input type="text" name="name" onChange={handleInputChange} />
+        <input type="text" name="name" value={form.name} onChange={handleInputChange} />
       </label>
       <label data-domain="Amount">
-        <input type="text" name="amt" onChange={handleInputChange} />
+        <input type="text" name="amt" value={form.amt} onChange={handleInputChange} />
       </label>
       <label data-domain="Item">
-        <input type="text" name="item" onChange={handleInputChange} />
+        <input type="text" name="item" value={form.item} onChange={handleInputChange} />
       </label>
       <label data-domain="Starting Date">
-        <input type="date" name="start_date" onChange={handleInputChange} />
+        <input type="date" name="start_date" value={form.data} onChange={handleInputChange} />
       </label>
       <label data-domain="Starting Time">
-        <input type="time" name="start_time" onChange={handleInputChange} />
+        <input type="time" name="start_time" value={form.time} onChange={handleInputChange} />
         
       </label>
       <label data-domain="Ending Date">
-        <input type="date" name="end_date" onChange={handleInputChange} />
+        <input type="date" name="end_date" value={form.data} onChange={handleInputChange} />
       </label>
       <label data-domain="Ending Time">
-        <input type="time" name="end_time" onChange={handleInputChange} />
+        <input type="time" name="end_time" value={form.time} onChange={handleInputChange} />
       </label>
     </div>
   );
