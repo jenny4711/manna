@@ -14,7 +14,8 @@
   2. Click the "Generate" button
   3. wait for a moment, and the result will appear on the right side.
 
-For registered users:<br/>
+For registered users:
+<br/>
 1.Log in to your account.<br/>
 2.Follow the same steps as mentioned above.<br/>
 3.If you wish to save the desired campaign, simply copy it, and it will be automatically saved.<br/>
