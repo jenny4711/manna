@@ -22,7 +22,7 @@
   border: 2px solid #333333;
 }
 .result button {
-  width: 140%;
+  width: 190%;
   height: 4rem;
   background-color: #ffdc60;
   font-family: 'Nunito Sans';
@@ -30,7 +30,7 @@
 }
 .result-text {
   display: flex;
-  width: 140%;
+  width: 190%;
   font-family: 'Nunito Sans';
   border: 2px solid #333333;
   background-color: #FFFFFF;
@@ -69,7 +69,7 @@
   align-items: center;
   width: 50%;
   height: 100vh;
-  padding-top: 2rem;
+  padding-top: 1rem;
  
   background-color: #F7F7F0;
   border: 2px solid #333333;
@@ -81,16 +81,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 40%; */
+  margin-top:1rem;
+
+ 
 }
 .form h1 {
-  margin-right: 21rem;
+  margin-right: 34rem;
   font-family: 'Lora';
+  font-size:32px;
+  font-weight:700
 }
 .Form-form input,
 label {
  
-  width: 672px;
+  width: 828px;
   height: 70px;
 
   background-color: #FFFFFF;
@@ -99,19 +103,22 @@ label {
   padding-right: 76px;
 
   box-sizing: border-box;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
-
+.Form-form input{
+  padding-left:1rem;
+  padding-top:1rem;
+}
 
 label::after {
   content: attr(data-domain);
   position: absolute;
-  top: 7px;
+  top: 10px;
   left: 16px;
   font-family: arial, helvetica, sans-serif;
   font-size: 12px;
   display: block;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(80, 77, 77, 0.6);
   font-weight: bold;
 }
 
@@ -163,7 +170,7 @@ input[type="time"]::-webkit-inner-spin-button {
 
 
 .Form-form input {
-  border: 1px solid #ddd;
+  border: 2px solid black;
 }
 .diff{
   color:rgba(0,0,0,0)
@@ -216,51 +223,11 @@ input[type="time"]::-webkit-inner-spin-button {
     no-repeat center center / 1.3rem auto;
 }
 
-/* .Form-form input:after {
-  position: absolute;
-  top: 50%;
-  left: 90%;
-  content: "";
-  width: 20px;
-  height: 22px;
 
-  background: #fff
-    
-    center center / contain;
-  transform: translateY(-50%);
-  z-index: 0;
-}
-
-input[type="date"]::-webkit-datetime-edit-month-field {
-  background: transparent;
-  bottom: 0;
-  color: transparent;
-  cursor: pointer;
-  height: auto;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: auto;
-  
-}
-
-input[type="time"]::-webkit-calendar-picker-indicator {
-  background: transparent;
-  bottom: 0;
-  color: transparent;
-  cursor: pointer;
-  height: auto;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: auto;
-} */
 
 .form button {
   font-family: 'Nunito Sans';
-  width: 672px;
+  width: 823px;
   height: 70px;
 font-style: normal;
 font-weight: 700;
@@ -273,12 +240,13 @@ line-height: 150%;
 .container {
   
   justify-content: flex-start;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom:1rem;
   
 }
 .navbar {
-  margin-right: 26rem;
+  margin-right: 30rem;
+  
  
 }
 .justify-content-end{
