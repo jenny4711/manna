@@ -161,9 +161,10 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .select-type{
   width: 828px;
   height: 70px;
-  padding-left:0.7rem;
+  padding-left:0.9rem;
+  padding-top:1rem;
   font-size:20px;
-  margin-top: 2rem;
+  margin-top:2rem;
   border:2px solid black;
   
 }
@@ -320,6 +321,10 @@ line-height: 150%;
     width: 100vw;
    
   }
+  .Form-form input:after {
+    left:90%
+  }
+  .select-type,
   .Form-form input,
   label,
   .result-text,
