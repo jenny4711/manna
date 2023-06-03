@@ -14,10 +14,10 @@
   2. Click the "Generate" button
   3. wait for a moment, and the result will appear on the right side.
 
-For registered users:
-1.Log in to your account
-2.Follow the same steps as mentioned above.
-3.If you wish to save the desired campaign, simply copy it, and it will be automatically saved.
+For registered users:<br/>
+1.Log in to your account.<br/>
+2.Follow the same steps as mentioned above.<br/>
+3.If you wish to save the desired campaign, simply copy it, and it will be automatically saved.<br/>
 4.If you want to view previously used promotions, you can access them by clicking on the "History" section located above.
 
 <h3>Connection Chat GPT</h3>
