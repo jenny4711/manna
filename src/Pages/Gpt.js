@@ -32,6 +32,7 @@ function Gpt({  show, setShow, login }) {
     start_time: "",
     end_date: "",
     end_time: "",
+    campaign_type:""
   });
   
   const [message, setMessage] = useState("");
@@ -45,7 +46,7 @@ function Gpt({  show, setShow, login }) {
 
   const handleChange = () => {
     setMessage(`You are promotion post creator. 
-       create a 'Facebook' promotion post. 
+       create a ${form.campaign_type} promotion post. 
        The business name is ${form.name}, 
        Promotion is ${form.amt} , 
        Promotion item is ${form.item}, 

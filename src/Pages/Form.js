@@ -86,6 +86,22 @@ const [type,setType]=useState(false)
           onClick={(e)=>makeTrue(e)}
         />
       </label>
+
+      <label data-domain="Campaign type">
+        <select
+          
+          name="campaign_type"
+          className="select-type"
+          value={form.campaign_type}
+          onChange={handleInputChange}
+          onClick={(e)=>makeTrue(e)}
+        >
+          <option>Facebook</option>
+          <option>Twitter</option>
+          <option>Instargram</option>
+          
+          </select>
+      </label>
     </div>
   );
 }
