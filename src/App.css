@@ -133,7 +133,7 @@ label::after {
 input[type="date"], input[type="time"]{
   position: relative;
   min-height: 30px;
-  padding: 10px 12px;
+  /* padding: 10px 12px; */
 
   font-size: 20px;
 }
@@ -141,7 +141,7 @@ input[type="date"], input[type="time"]{
 input[type="date"]::-webkit-calendar-picker-indicator {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 5;
   width: 100%;
   height: 100%;
   background: transparent;
