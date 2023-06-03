@@ -1,5 +1,6 @@
 <h1>Capstone2 Manna Campaign Generator</h1>
 <h4>Web: https://remarkable-shortbread-919059.netlify.app</h4>
+
 <h3>Discription</h3>
 <p>"Some owners of service businesses often organize events to promote their services. However, many people are concerned about how to write effective phrases for these events. Therefore, 
   I would like to create a campaign generator that can help them craft compelling phrases</p>
