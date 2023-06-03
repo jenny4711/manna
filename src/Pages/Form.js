@@ -20,7 +20,7 @@ const [type,setType]=useState(false)
     <div className="Form-form">
     
 
-      <label data-domain="BusinessName">
+      <label data-domain="Restaurant name">
         <input
           type="text"
           name="name"
@@ -28,7 +28,7 @@ const [type,setType]=useState(false)
           onChange={handleInputChange}
         />
       </label>
-      <label data-domain="Amount">
+      <label data-domain="Promotion amount">
         <input
           type="text"
           name="amt"
@@ -36,7 +36,7 @@ const [type,setType]=useState(false)
           onChange={handleInputChange}
         />
       </label>
-      <label data-domain="Item">
+      <label data-domain="Promotion Item">
         <input
           type="text"
           name="item"
@@ -44,7 +44,7 @@ const [type,setType]=useState(false)
           onChange={handleInputChange}
         />
       </label>
-      <label data-domain="Starting Date">
+      <label data-domain="Starting date">
        
         <input
           type="date"
@@ -56,7 +56,7 @@ const [type,setType]=useState(false)
         />
       {console.log(type)}
       </label>
-      <label data-domain="Starting Time">
+      <label data-domain="Starting time">
         <input
           type="time"
           name="start_time"
@@ -66,7 +66,7 @@ const [type,setType]=useState(false)
           onClick={(e)=>makeTrue(e)}
         />
       </label>
-      <label data-domain="Ending Date">
+      <label data-domain="Ending date">
         <input
           type="date"
           name="end_date"
@@ -76,7 +76,7 @@ const [type,setType]=useState(false)
           onClick={(e)=>makeTrue(e)}
         />
       </label>
-      <label data-domain="Ending Time">
+      <label data-domain="Ending time">
         <input
           type="time"
           name="end_time"

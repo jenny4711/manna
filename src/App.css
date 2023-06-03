@@ -81,20 +81,25 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top:1rem;
+  margin-top:0.6rem;
 
  
 }
 .form h1 {
-  margin-right: 34rem;
+  margin-right: 37rem;
+  margin-top:0.6rem;
   font-family: 'Lora';
-  font-size:32px;
-  font-weight:700
+  font-size:33px;
+  font-weight:700;
+  line-height: 134.12%;
+  letter-spacing: -0.04em;
+  color: #333333;
+
 }
 .Form-form input,
 label {
  
-  width: 828px;
+  width: 860px;
   height: 70px;
 
   background-color: #FFFFFF;
@@ -107,14 +112,14 @@ label {
 }
 .Form-form input{
   padding-left:1rem;
-  padding-top:1rem;
+  padding-top:1.5rem;
 }
 
 label::after {
   content: attr(data-domain);
   position: absolute;
-  top: 10px;
-  left: 16px;
+  top: 14px;
+  left: 18px;
   font-family: arial, helvetica, sans-serif;
   font-size: 12px;
   display: block;
@@ -159,12 +164,12 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   z-index: 1;
 }
 .select-type{
-  width: 828px;
+  width: 860px;
   height: 70px;
   padding-left:0.9rem;
   padding-top:1rem;
   font-size:20px;
-  margin-top:2rem;
+  margin-top: 2rem;
   border:2px solid black;
   
 }
@@ -259,7 +264,7 @@ input[type="time"]::-webkit-inner-spin-button {
 
 .form button {
   font-family: 'Nunito Sans';
-  width: 823px;
+  width: 860px;
   height: 70px;
 font-style: normal;
 font-weight: 700;
@@ -272,8 +277,8 @@ line-height: 150%;
 .container {
   
   justify-content: flex-start;
-  padding-top: 1rem;
-  padding-bottom:1rem;
+  padding-top: 1.2rem;
+  padding-bottom:1.2rem;
   
 }
 .navbar {
