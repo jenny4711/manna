@@ -39,8 +39,8 @@ function Gpt({  show, setShow, login }) {
   const [isTyping, setIsTyping] = useState(false);
 
   const { msgs, info, user } = useSelector((state) => state.gpt);
-  const [getInfo, setGetInfo] = useState(null);
-  const [item, setItem] = useState(sample);
+  // const [getInfo, setGetInfo] = useState(null);
+  // const [item, setItem] = useState(sample);
   const dispatch = useDispatch();
 
   const handleChange = () => {

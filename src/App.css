@@ -4,7 +4,7 @@
   flex-direction: column;
   text-align: center;
   /* height:100%; */
-  background-color: #ffffff;
+  background-color: #F7F7F0;
 }
 .App-div {
   display: flex;
@@ -14,10 +14,10 @@
   display: flex;
   flex-direction: column;
   width: 50%;
-  /* height:100vh; */
-  justify-content: center;
+
+  justify-content: flex-start;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #F7F7F0;
 
   border: 2px solid #333333;
 }
@@ -25,20 +25,23 @@
   width: 140%;
   height: 4rem;
   background-color: #ffdc60;
+  font-family: 'Nunito Sans';
+  font-weight: 700;
 }
 .result-text {
   display: flex;
   width: 140%;
-  /* height: 20%; */
+  font-family: 'Nunito Sans';
   border: 2px solid #333333;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   padding: 1rem;
 }
+
 .result-div {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-bottom:1rem;
   align-items: center;
   width: 50%;
@@ -47,7 +50,7 @@
 .typing {
   height: 100%;
   width: 100%;
-  background-color: #ffffff;
+  background-color: #F7F7F0;
   text-align: center;
 }
 .result-text span{
@@ -67,9 +70,10 @@
   width: 50%;
   height: 100vh;
   padding-top: 2rem;
-  background-color: #ffffff;
+ 
+  background-color: #F7F7F0;
   border: 2px solid #333333;
-  border-right: #ffffff;
+  border-right: #F7F7F0;
 }
 
 .Form-form {
@@ -80,15 +84,16 @@
   /* width: 40%; */
 }
 .form h1 {
-  margin-right: 27rem;
+  margin-right: 21rem;
+  font-family: 'Lora';
 }
 .Form-form input,
 label {
  
-  width: 50rem;
-  height: 4rem;
+  width: 672px;
+  height: 70px;
 
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   position: relative;
   display: block;
   padding-right: 76px;
@@ -97,10 +102,11 @@ label {
   margin-bottom: 2rem;
 }
 
+
 label::after {
   content: attr(data-domain);
   position: absolute;
-  top: 4px;
+  top: 7px;
   left: 16px;
   font-family: arial, helvetica, sans-serif;
   font-size: 12px;
@@ -109,7 +115,123 @@ label::after {
   font-weight: bold;
 }
 
+
+
+
+input[type="date"], input[type="time"]{
+  position: relative;
+  min-height: 30px;
+  padding: 10px 12px;
+
+  font-size: 20px;
+}
+
 input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+
+  z-index: 1;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+
+  z-index: 1;
+}
+
+/* input[type="date"]::-webkit-clear-button,
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+} */
+input[type="time"]::-webkit-clear-button,
+input[type="time"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+
+.Form-form input {
+  border: 1px solid #ddd;
+}
+.diff{
+  color:rgba(0,0,0,0)
+}
+.Form-form input:after {
+  position: absolute;
+  top: 50%;
+  left: 93%;
+  content: "";
+  width: 20px;
+  height: 22px;
+
+  background: #fff
+    url("https://cdn-icons-png.flaticon.com/512/32/32195.png?w=740&t=st=1685741790~exp=1685742390~hmac=afacf4659f1915f70b1887c0f482d0da0ea2785eea1198a7cb29e010d397de9a")
+    center center / contain;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+#date-time-edit{
+  display:none;
+}
+/* 버튼 클릭시 input 나옴 */
+.all-date-setting-input input[type="date"] {
+  position: relative;
+  font-size: 0;
+  border: none;
+
+  width: 2rem;
+  height: 2rem;
+
+  margin: 0 auto;
+  padding: 0;
+
+  background: url("https://lh3.googleusercontent.com/ogw/ADea4I6bjkdf2t0DAHqD6ZP5ylrs5LMS6FOR0JxyZxHn=s83-c-mo")
+    no-repeat center center / 1.3rem auto;
+}
+
+.all-date-setting-input input[type="time"] {
+  position: relative;
+  font-size: 0;
+  border: none;
+
+  width: 2rem;
+  height: 2rem;
+
+  margin: 0 auto;
+  padding: 0;
+
+  background: url("https://lh3.googleusercontent.com/ogw/ADea4I6bjkdf2t0DAHqD6ZP5ylrs5LMS6FOR0JxyZxHn=s83-c-mo")
+    no-repeat center center / 1.3rem auto;
+}
+
+/* .Form-form input:after {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  content: "";
+  width: 20px;
+  height: 22px;
+
+  background: #fff
+    
+    center center / contain;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+input[type="date"]::-webkit-datetime-edit-month-field {
   background: transparent;
   bottom: 0;
   color: transparent;
@@ -120,6 +242,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   right: 0;
   top: 0;
   width: auto;
+  
 }
 
 input[type="time"]::-webkit-calendar-picker-indicator {
@@ -133,12 +256,16 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   right: 0;
   top: 0;
   width: auto;
-}
+} */
 
 .form button {
-  width: 50rem;
-  height: 4rem;
-  margin: 1rem;
+  font-family: 'Nunito Sans';
+  width: 672px;
+  height: 70px;
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 150%;
   background-color: #ffdc60;
 }
 
@@ -181,7 +308,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 @media (max-width: 1100px) {
   .form {
-    border-bottom: #ffffff;
+    border-bottom: #F7F7F0;
   }
   .App-div {
     flex-direction: column-reverse;
