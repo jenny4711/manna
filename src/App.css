@@ -81,15 +81,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top:0.6rem;
+  margin-top:1rem;
 
  
 }
 .form h1 {
   margin-right: 37rem;
-  margin-top:0.6rem;
+  margin-top:0.5rem;
   font-family: 'Lora';
-  font-size:33px;
+  font-size:32px;
   font-weight:700;
   line-height: 134.12%;
   letter-spacing: -0.04em;
@@ -166,11 +166,22 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .select-type{
   width: 860px;
   height: 70px;
-  padding-left:0.9rem;
-  padding-top:1rem;
+  padding-left:1rem;
+  padding-top:1.5rem;
   font-size:20px;
   margin-top: 2rem;
   border:2px solid black;
+  font-family: 'Nunito Sans';
+/* font-style: normal; */
+font-weight: 700;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+
+color: #000000;
+
+
   
 }
 select {
@@ -207,6 +218,12 @@ input[type="time"]::-webkit-inner-spin-button {
 
 .Form-form input {
   border: 2px solid black;
+  font-family: 'Nunito Sans', sans-serif;
+ 
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 150%;
 }
 .diff{
   color:rgba(0,0,0,0)
