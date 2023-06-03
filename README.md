@@ -6,6 +6,19 @@
 <h3>Discription</h3>
 <p>"Some owners of service businesses often organize events to promote their services. However, many people are concerned about how to write effective phrases for these events. Therefore, 
   I would like to create a campaign generator that can help them craft compelling phrases</p>
+  
+  <h3>How To Use</h3>
+  For users who haven't registered:
+  1. Fill out the form.
+  2. Click the "Generate" button
+  3. wait for a moment, and the result will appear on the right side.
+
+For registered users:
+1.Log in to your account
+2.Follow the same steps as mentioned above.
+3.If you wish to save the desired campaign, simply copy it, and it will be automatically saved.
+4.If you want to view previously used promotions, you can access them by clicking on the "History" section located above.
+
 <h3>Connection Chat GPT</h3>
 <p>Chat GPT 3.5turbo (openai module)</p>
 
