@@ -201,7 +201,7 @@ select::-ms-expand{
 }
 select{
   background:url("https://cdn-icons-png.flaticon.com/512/32/32195.png?w=740&t=st=1685741790~exp=1685742390~hmac=afacf4659f1915f70b1887c0f482d0da0ea2785eea1198a7cb29e010d397de9a")
-  no-repeat 95%  / 1.3rem auto;
+  no-repeat 95%  / 1rem auto;
   transform: translateY(-50%);
   z-index: 0;
  
@@ -238,7 +238,7 @@ line-height: 150%;
 
   background: #fff
     url("https://cdn-icons-png.flaticon.com/512/32/32195.png?w=740&t=st=1685741790~exp=1685742390~hmac=afacf4659f1915f70b1887c0f482d0da0ea2785eea1198a7cb29e010d397de9a")
-    center center / contain;
+    no-repeat 95%  / 1rem auto;
   transform: translateY(-50%);
   z-index: 0;
 }
@@ -274,7 +274,7 @@ line-height: 150%;
   padding: 0;
 
   background: url("https://lh3.googleusercontent.com/ogw/ADea4I6bjkdf2t0DAHqD6ZP5ylrs5LMS6FOR0JxyZxHn=s83-c-mo")
-    no-repeat center center / 1.3rem auto;
+    no-repeat center center / 1rem auto;
 }
 
 
