@@ -8,6 +8,7 @@
   I would like to create a campaign generator that can help them craft compelling phrases</p>
   
   <h3>How To Use</h3>
+  
   For users who haven't registered:
   1. Fill out the form.
   2. Click the "Generate" button
