@@ -6,6 +6,9 @@
   /* height:100%; */
   background-color: #F7F7F0;
 }
+.test{
+  padding-bottom:1rem;
+}
 .App-div {
   display: flex;
   flex-direction: row-reverse;
@@ -126,16 +129,29 @@ label::after {
   color: rgba(80, 77, 77, 0.6);
   font-weight: bold;
 }
+.diff::after {
+  content: attr(data-domain);
+  position: absolute;
+  top: 23px;
+  left: 20px;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 16px;
+  display: block;
+  color: rgba(80, 77, 77, 0.6);
+  font-weight: bold;
+}
 
 
-
+.hide{
+  display:none;
+}
 
 input[type="date"], input[type="time"]{
   position: relative;
   min-height: 30px;
   /* padding: 10px 12px; */
 
-  font-size: 20px;
+  font-size: 30px;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -294,8 +310,8 @@ line-height: 150%;
 .container {
   
   justify-content: flex-start;
-  padding-top: 1.2rem;
-  padding-bottom:1.2rem;
+  padding-top: 1.4rem;
+  padding-bottom:1.3rem;
   
 }
 .navbar {
@@ -350,7 +366,8 @@ line-height: 150%;
   .Form-form input,
   label,
   .result-text,
-  .result button {
+  .result button,
+  .form button {
     width: 20rem;
     margin-bottom: 1rem;
     
@@ -363,7 +380,10 @@ line-height: 150%;
     margin-right: 0;
   }
   .form button {
-    width: 20rem;
+    
+    color:black;
+  
+    
   }
 
 .btns button{
