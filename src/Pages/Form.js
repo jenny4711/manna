@@ -3,7 +3,7 @@ import "../App.css";
 
 
 
-function Form({ setForm, form }) {
+function Form({ setForm, form,handleChange }) {
 const [type,setType]=useState(false)
 const [show,setShow]=useState(false)
 
@@ -116,6 +116,7 @@ const [show,setShow]=useState(false)
           
           </select>
       </label>
+      <button onClick={handleChange}>Generate</button>
     </div>
   );
 }
