@@ -6,7 +6,7 @@ const HowTo = ({ login }) => {
   const [show, setShow] = useState(true);
 
   return (
-    <>
+    <div className='HowTo'>
       <Alert show={show} className={login ? "hide" : ""}>
         <Alert.Heading>About History</Alert.Heading>
         <p>To access the History section,please register for an account.</p>
@@ -17,7 +17,7 @@ const HowTo = ({ login }) => {
           </Button>
         </div>
       </Alert>
-    </>
+    </div>
   );
 };
 
