@@ -405,11 +405,11 @@ label,.select-type,.form button {
   .navbar-expand{
     width:100vw;
   }
-  .result{
+  /* .result{
     border:1px solid black;
     border-left: #F7F7F0;
     border-right: #F7F7F0;
-  }
+  } */
   .Form-form {
     display: flex;
     flex-direction: column;
