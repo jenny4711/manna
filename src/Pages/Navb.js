@@ -37,7 +37,7 @@ const Navb = ({ login, setShow, logOut }) => {
           <img src="./img/manna.png" />
         </Navbar.Brand>
         <Navbar.Toggle />
-        <Nav className="justify-content-end">
+        <Nav className="justify-content-end right">
           <Nav.Link href="/register" className={!login ? "" : "hide"}>
             Register
           </Nav.Link>

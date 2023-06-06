@@ -158,7 +158,7 @@ function Gpt({  show, setShow, login }) {
           <Form setForm={handleFormChange} handleChange={handleChange} form={form}/>
           {/* <button onClick={handleChange}>Generate</button> */}
         </form>
-        <br/>
+      
       </div>
     </>
   );

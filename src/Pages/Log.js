@@ -3,6 +3,8 @@ import {useNavigate} from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux";
 import { gptAction } from '../redux/actions/msgAction';
 import useLocalStorage from '../useLocalStorage';
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import Form from 'react-bootstrap/Form';
 import '../CSS/Log.css'
 
 const Log = ({login,setLogin}) => {
@@ -48,11 +50,39 @@ const navigate=useNavigate()
   return (
     <div className='Log'>
       <h1>Login</h1>
-       <form className='login' onSubmit={handleSubmit}>
+      <form className='login' onSubmit={handleSubmit}>
+      <FloatingLabel
+        controlId="floatingInput"
+        label="Email address"
+        className="mb-3"
+     
+      >
+        <Form.Control 
+        type="email" 
+        placeholder="name@example.com"   
+        name="email"
+        value={data.email}
+        onChange={handleChange} />
+      </FloatingLabel>
+
+      <FloatingLabel controlId="floatingPassword" label="Password">
+        <Form.Control 
+        type="password" 
+        placeholder="Password" 
+        name="password"
+        value={data.password}
+        onChange={handleChange}
+        />
+      </FloatingLabel>
+      <button className='loginBtn'>Submit</button>
+      </form>
+
+
+       {/* <form className='login' onSubmit={handleSubmit}>
         <input name="email" type="text" value={data.email} onChange={handleChange} placeholder='Email'/>
         <input name="password" type="text" value={data.password} onChange={handleChange} placeholder='Password' />
-  <button className='loginBtn'>Submit</button>
-      </form>
+       <button className='loginBtn'>Submit</button>
+      </form> */}
     </div>
   )
 }
