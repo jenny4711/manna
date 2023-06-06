@@ -113,9 +113,7 @@ function Gpt({  show, setShow, login }) {
     <>
       <div className="App-div">
         <section className="result">
-          <div className="HowTo">
-            <HowTo login={login} />
-          </div>
+        
 
           {isTyping ? (
             <div className="typing">
@@ -145,9 +143,13 @@ function Gpt({  show, setShow, login }) {
                       Copy
                     </button>
                   </CopyToClipboard>
+           
                 </div>
               ))
             : ""}
+                     <div className="HowTo">
+            <HowTo login={login} />
+          </div>
           <div className={!show ? "hide" : "gpt_history"}>
             <History msgs={msgs} setShow={setShow} info={info} />
           </div>
