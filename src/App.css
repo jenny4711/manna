@@ -468,6 +468,8 @@ label,.select-type,.form button {
   .form button {
     
     color:black;
+    margin-bottom:1rem;
+    padding-bottom:1rem;
   
     
   }
