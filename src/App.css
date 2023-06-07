@@ -469,14 +469,14 @@ label,.select-type,.form button{
    
     
   }
-  .form,
+  /* .form,
   .result {
     width: 100vw; 
     height:100vh;
-     /* height:100vh; */
-   
-  }
-
+     /* height:100vh; 
+    }*/
+ 
+  
   
   .Form-form input:after {
     left:90%
