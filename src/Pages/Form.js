@@ -3,7 +3,7 @@ import "../App.css";
 
 
 
-function Form({ setForm, form,handleChange }) {
+function Form({ setForm, form,handleChange,chat,message }) {
 const [type,setType]=useState(false)
 const [show,setShow]=useState(false)
 
@@ -21,9 +21,9 @@ const [show,setShow]=useState(false)
   }
 
   return (
-    <div className="Form-form">
-    
-    
+    <>
+    <form className="Form-form" onSubmit={(e) => chat(e, message)}>
+    <h1>Campaign generator</h1>
       <label data-domain="Business name" className={!show?'diff':""} >
         <input
           type="text"
@@ -117,7 +117,8 @@ const [show,setShow]=useState(false)
           </select>
       </label>
       <button onClick={handleChange}>Generate</button>
-    </div>
+      </form>
+    </>
   );
 }
 

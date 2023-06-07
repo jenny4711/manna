@@ -18,7 +18,7 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-function Gpt({  show, setShow, login }) {
+function Gpt({ show, setShow, login }) {
   let sample = {
     user_id: "",
     msg: "",
@@ -32,9 +32,9 @@ function Gpt({  show, setShow, login }) {
     start_time: "",
     end_date: "",
     end_time: "",
-    campaign_type:""
+    campaign_type: "",
   });
-  
+
   const [message, setMessage] = useState("");
   const [chats, setChats] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
@@ -55,17 +55,15 @@ function Gpt({  show, setShow, login }) {
         Until ${form.end_date},
          ${form.end_time}  `);
 
-         setForm({
-          name: "",
-          amt: "",
-          item: "",
-          start_date: "",
-          start_time: "",
-          end_date: "",
-          end_time: "",
-         })
-
-         
+    setForm({
+      name: "",
+      amt: "",
+      item: "",
+      start_date: "",
+      start_time: "",
+      end_date: "",
+      end_time: "",
+    });
   };
 
   const handleFormChange = (fieldName, value) => {
@@ -112,18 +110,18 @@ function Gpt({  show, setShow, login }) {
   return (
     <>
       <div className="App-div">
-      <form className="form" onSubmit={(e) => chat(e, message)}>
-         
-         <h1>Campaign generator</h1>
-        
-      
-         <Form setForm={handleFormChange} handleChange={handleChange} form={form}/>
-         {/* <button onClick={handleChange}>Generate</button> */}
-       </form>
-       <br/>
-        <section className="result">
-        
+        <div className="form">
+          <Form
+            setForm={handleFormChange}
+            handleChange={handleChange}
+            form={form}
+            chat={chat}
+            message={message}
+          />
+        </div>
 
+        <br />
+        <section className="result">
           {isTyping ? (
             <div className="typing">
               <ClipLoader
@@ -152,21 +150,16 @@ function Gpt({  show, setShow, login }) {
                       Copy
                     </button>
                   </CopyToClipboard>
-           
                 </div>
               ))
             : ""}
-                     <div className="HowTo">
+          <div className="HowTo">
             <HowTo login={login} />
           </div>
           <div className={!show ? "hide" : "gpt_history"}>
             <History msgs={msgs} setShow={setShow} info={info} />
           </div>
         </section>
-
-       
-      
-      
       </div>
     </>
   );
