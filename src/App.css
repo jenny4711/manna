@@ -389,9 +389,9 @@ label,.select-type,.form button{
 }
 @media (max-width: 782px) {
  
- /* .App{
-  width:100vw;
- } */
+.result-text,.result-div button{
+  width:90vw;
+}
   .container .justify-content-end{
   
     margin-left:10%;
