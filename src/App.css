@@ -421,6 +421,14 @@ label,.select-type,.form button{
 
 }
 @media (max-width: 782px) {
+  .result-div {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .form {
+    width: 100%;
+  }
   .App{
     width:100vw;
   }
