@@ -399,14 +399,17 @@ label,.select-type,.form button{
   .justify-content-end{
     margin-left:10%;
   }
-  
+  .Form-form h1{
+    margin-left:0px;
+  }
   .form,.result{
     width:100vw;
     margin-left: 0.5rem;
   }
  .result{
   margin-top:3rem;
- border:none;
+border:none;
+border-top:1px solid black;
   
  }
   .App-div {
@@ -417,12 +420,12 @@ label,.select-type,.form button{
   }
   .Form-form input,.Form-form .diff,.select-type{
     width:90vw;
-  margin-left:0.5rem;
+  margin-left:0.3rem;
 
   }
   .Form-form button{
     width:90vw;
-    margin-left:1.5rem;
+    margin-left:0.6rem;
 
   }
 
@@ -443,20 +446,6 @@ label,.select-type,.form button{
     background:url("https://cdn-icons-png.flaticon.com/512/32/32195.png?w=740&t=st=1685741790~exp=1685742390~hmac=afacf4659f1915f70b1887c0f482d0da0ea2785eea1198a7cb29e010d397de9a")
   no-repeat 92%  / 1rem auto;
   }
- 
-  
- 
-  
-  /* .form h1{
-    color:black;
-    margin-right: 4rem;
-    font-size: 25px;
-    line-height: 120%;
-    white-space: nowrap;
- 
-    text-overflow: ellipsis;
-    text-align: center;
-  } */
 
 }
 
