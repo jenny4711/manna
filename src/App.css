@@ -471,7 +471,7 @@ label,.select-type,.form button{
   }
  
   .result {
-    width: 100vw; 
+    /* width: 100vw;  */
     height:100vh;
      /* height:100vh; 
     }
