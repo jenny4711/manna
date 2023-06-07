@@ -400,10 +400,10 @@ label,.select-type,.form button{
     margin-left:10%;
   }
   .Form-form h1{
-    margin-left:0px;
+    margin-left:10px;
   }
   .form,.result{
-    width:100vw;
+    width:98vw;
     margin-left: 0.5rem;
   }
  .result{
