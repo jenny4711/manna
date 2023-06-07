@@ -112,6 +112,15 @@ function Gpt({  show, setShow, login }) {
   return (
     <>
       <div className="App-div">
+      <form className="form" onSubmit={(e) => chat(e, message)}>
+         
+         <h1>Campaign generator</h1>
+        
+      
+         <Form setForm={handleFormChange} handleChange={handleChange} form={form}/>
+         {/* <button onClick={handleChange}>Generate</button> */}
+       </form>
+       <br/>
         <section className="result">
         
 
@@ -156,14 +165,7 @@ function Gpt({  show, setShow, login }) {
         </section>
 
        
-        <form className="form" onSubmit={(e) => chat(e, message)}>
-         
-          <h1>Campaign generator</h1>
-         
-       
-          <Form setForm={handleFormChange} handleChange={handleChange} form={form}/>
-          {/* <button onClick={handleChange}>Generate</button> */}
-        </form>
+      
       
       </div>
     </>

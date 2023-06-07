@@ -11,7 +11,7 @@
 }
 .App-div {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
 
 }
 .result {
@@ -22,7 +22,7 @@
   justify-content: flex-start;
   align-items: center;
   background-color: #F7F7F0;
-/* margin-top:4rem; */
+
   border: 2px solid #333333;
   border-top:none;
   border-bottom:none;
@@ -35,7 +35,7 @@
   font-weight: 700;
 }
 .result-text {
-  /* display: flex; */
+
   width: 100%;
   font-family: 'Nunito Sans';
   border: 2px solid #333333;
@@ -48,10 +48,10 @@
   flex-direction: column;
   justify-content: flex-start;
   margin-top: 2rem;
-  /* margin-bottom:1rem; */
+
   align-items: center;
   width: 50%;
-  /* height: 100vh; */
+
 }
 .typing {
   height: 100%;
@@ -89,34 +89,17 @@
   align-items: center;
   margin-top:1rem;
   width: 50vw;
+  height: 100vh;
   margin-bottom:2rem;
 padding-bottom:1rem;
-  /* border: 2px solid #333333; */
-  /* border-top:#F7F7F0; */
+ 
 
 
 
  
 }
 
-/* .Form-form {
-  width: 100vw;
-  margin-bottom:2rem;
-padding-bottom:1rem;
-  border: 2px solid #333333;
-  border-top:#F7F7F0;
 
-  
- 
-} */
-/* .form_h1{
-  display:flex;
-  flex-direction:row;
-  width: 48vw;
-  height: 80px;
-  border: 1px solid black;
-  align-items: flex-start;
-} */
 .form h1{
  width:48vw;
  text-align:left;
@@ -194,7 +177,7 @@ label::after {
 input[type="date"], input[type="time"]{
   position: relative;
   min-height: 30px;
-  /* padding: 10px 12px; */
+ 
 
   font-size: 30px;
 }
@@ -233,11 +216,10 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   margin-top: 2rem;
   border:2px solid black;
   font-family: 'Nunito Sans';
-/* font-style: normal; */
+
 font-weight: 700;
 font-size: 16px;
-/* line-height: 150%; */
-/* identical to box height, or 24px */
+
 
 
 color: #000000;
@@ -421,99 +403,69 @@ label,.select-type,.form button{
 
 }
 @media (max-width: 782px) {
-  .result-div {
-    width: 100vw;
-    margin-bottom: 2rem;
-    height: 90vh;
-  }
-  
-  .form {
-    width: 100vw;
-    height:110vh; 
-  }
-  .App{
-    width:100vw;
-  }
-  .navbar-expand{
-    width:100vw;
-  }
-  .result{
-   width:100%;
-  }
-  .Form-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    /* border: 2px solid #333333; */
-    border-top: none;
-    width: 80%;
-  }
-  
+ 
+ /* .App{
+  width:100vw;
+ } */
   .container .justify-content-end{
+  
     margin-left:10%;
   }
   .justify-content-end{
     margin-left:10%;
   }
- 
   
- 
+  .form,.result{
+    width:100vw;
+    margin-left: 0.5rem;
+  }
+ .result{
+  margin-top:3rem;
+ border:none;
+  
+ }
   .App-div {
-    flex-direction: column-reverse;
-   
+    flex-direction: column;
+    width:100vw;
     
+  
+  }
+  .Form-form input,.Form-form .diff,.select-type{
+    width:75vw;
+  /* margin-left:-1rem; */
+
+  }
+
+ .Form-form{
+  width:80vw;
+  display:flex;
+  justify-content: center;
+  text-align: center;
+  
+  }
+  .Form-form input:after{
+    left:85%;
+  }
+ 
+  select{
+    background:url("https://cdn-icons-png.flaticon.com/512/32/32195.png?w=740&t=st=1685741790~exp=1685742390~hmac=afacf4659f1915f70b1887c0f482d0da0ea2785eea1198a7cb29e010d397de9a")
+  no-repeat 91%  / 1rem auto;
   }
  
   
  
   
-  
-  .Form-form input:after {
-    left:90%
-  }
-  .select-type,
-  .Form-form input,
-  label,
-  .result-text,
-  .result button,
-  .form button {
-    width: 20rem;
-   
-    
-  }
- 
-  .result-text {
-    height: 100vh;
-    padding: 1rem;
-  }
- 
-  .form button {
-    
-    color:black;
-    margin-bottom:1rem;
-   
-  
-    
-  }
-  
-  
-  .form h1{
+  /* .form h1{
     color:black;
     margin-right: 4rem;
     font-size: 25px;
     line-height: 120%;
     white-space: nowrap;
-    /* overflow: hidden; */
+ 
     text-overflow: ellipsis;
     text-align: center;
-  }
-.btns button{
-  width:9.1rem;
-  margin-right:1rem;
-  
+  } */
+
 }
-}
+
+
