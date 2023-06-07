@@ -155,8 +155,12 @@ function Gpt({  show, setShow, login }) {
           </div>
         </section>
 
+       
         <form className="form" onSubmit={(e) => chat(e, message)}>
+         
           <h1>Campaign generator</h1>
+         
+       
           <Form setForm={handleFormChange} handleChange={handleChange} form={form}/>
           {/* <button onClick={handleChange}>Generate</button> */}
         </form>

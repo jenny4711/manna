@@ -23,7 +23,7 @@ const [show,setShow]=useState(false)
   return (
     <div className="Form-form">
     
-
+    
       <label data-domain="Business name" className={!show?'diff':""} >
         <input
           type="text"
