@@ -429,7 +429,7 @@ label,.select-type,.form button{
   
   .form {
     width: 100vw;
-    height:120vh; 
+    height:110vh; 
   }
   .App{
     width:100vw;
@@ -447,7 +447,7 @@ label,.select-type,.form button{
     align-items: center;
     margin-top: 1rem;
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
     /* border: 2px solid #333333; */
     border-top: none;
     width: 80%;
@@ -503,12 +503,13 @@ label,.select-type,.form button{
   
   .form h1{
     color:black;
-    margin-right: 0rem;
+    margin-right: 4rem;
     font-size: 25px;
     line-height: 120%;
     white-space: nowrap;
     /* overflow: hidden; */
     text-overflow: ellipsis;
+    text-align: center;
   }
 .btns button{
   width:9.1rem;
