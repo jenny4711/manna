@@ -276,9 +276,19 @@ line-height: 150%;
     }
 
    
-    input[type="date"]:valid{color:black;}
+    input[type="date"]:valid{
+      color:black;
+    
+    }
     
     .after[type="date"]:valid{color:white;}
+
+    input[type="time"]:valid{
+      color:black;
+    
+    }
+    
+    .after[type="time"]:valid{color:white;}
 
 
   }
