@@ -291,9 +291,10 @@ line-height: 150%;
     }
     
     .after[type="time"]:valid{color:white;}
+
     input[type="date"], input[type="time"]{
-      padding-top:30px;
-      padding-right:30px;
+      text-align: left; 
+    padding-left: 10px;
     }
 
   }
