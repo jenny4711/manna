@@ -75,7 +75,7 @@ label::after {
 input[type="date"], input[type="time"]{
   position: relative;
   min-height: 30px;
- 
+
 
   font-size: 30px;
 }
@@ -287,12 +287,14 @@ line-height: 150%;
 
     input[type="time"]:valid{
       color:black;
-      padding-top:1rem;
-      padding-right:1rem;
+     
     }
     
     .after[type="time"]:valid{color:white;}
-
+    input[type="date"], input[type="time"]{
+      padding-top:30px;
+      padding-right:30px;
+    }
 
   }
 
