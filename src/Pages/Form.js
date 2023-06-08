@@ -51,7 +51,7 @@ const [show,setShow]=useState(false)
          
         />
       </label>
-      <label data-domain="Starting date"  className={!type?'diff':""}>
+      <label data-domain="Starting date"  className={!show?'diff':""}>
        
         <input
           type="date"
@@ -65,33 +65,33 @@ const [show,setShow]=useState(false)
         />
      
       </label>
-      <label data-domain="Starting time" className={!type?'diff':""}>
+      <label data-domain="Starting time" className={!show?'diff':""}>
         <input
           type="time"
           name="start_time"
           value={form.start_time}
-          className={!type?'diff':""}
+          className={!type?'after':""}
           onChange={handleInputChange}
           onClick={(e)=>makeTrue(e)}
           placeholder='Starting time'
         />
       </label>
-      <label data-domain="Ending date" className={!type?'diff':""}>
+      <label data-domain="Ending date" className={!show?'diff':""}>
         <input
           type="date"
           name="end_date"
-          className={!type?'diff':""}
+          className={!type?'after':""}
           value={form.end_date}
           onChange={handleInputChange}
           onClick={(e)=>makeTrue(e)}
           placeholder='Ending date'
         />
       </label>
-      <label data-domain="Ending time" className={!type?'diff':""}>
+      <label data-domain="Ending time" className={!show?'diff':""}>
         <input
           type="time"
           name="end_time"
-          className={!type?'diff':""}
+          className={!type?'after':""}
           value={form.end_time}
           onChange={handleInputChange}
           onClick={(e)=>makeTrue(e)}
@@ -99,7 +99,7 @@ const [show,setShow]=useState(false)
         />
       </label>
 
-      <label data-domain="Campaign type" className={!type?'diff':""}>
+      <label data-domain="Campaign type" className={!show?'diff':""}>
         <select
           
           name="campaign_type"
