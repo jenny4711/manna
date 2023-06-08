@@ -2,7 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import "../App.css";
+import "../CSS/Navb.css";
 import { useDispatch, useSelector } from "react-redux";
 import { gptAction } from "../redux/actions/msgAction";
 import { useNavigate } from "react-router-dom";

@@ -1,0 +1,51 @@
+/* Navb.js */
+.navbar-expand{
+
+  border: 2px solid black;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  width:100vw;
+}
+.container {
+  
+  /* justify-content: flex-start; */
+  padding-top: 1.3rem;
+  padding-bottom:1.3rem;
+  
+  
+}
+.navbar>.container {
+  flex-wrap:wrap;
+  justify-content: flex-start;
+  margin-right: 62rem;
+  margin-left:1rem;
+
+ 
+ 
+}
+.container .justify-content-end{
+  margin-left:160%;
+}
+
+.justify-content-end{
+  margin-left:100%;
+
+  
+}
+@media (max-width: 782px) {
+ 
+  
+    .container .justify-content-end{
+    
+      margin-left:10%;
+    }
+    .justify-content-end{
+      margin-left:10%;
+    }
+    
+  
+  
+  }
+  
+  
