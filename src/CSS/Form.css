@@ -292,9 +292,9 @@ line-height: 150%;
     
     .after[type="time"]:valid{color:white;}
 
-    input[type="date"], input[type="time"]{
-      text-align: left; 
-    padding-left: 10px;
+    .Form-form input[type="date"], input[type="time"]{
+      padding-left:1rem;
+      padding-top:1.5rem;
     }
 
   }
