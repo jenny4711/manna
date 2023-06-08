@@ -57,7 +57,7 @@ const [show,setShow]=useState(false)
           type="date"
           name="start_date"
           value={form.start_date}
-          className={!type?'diff':""}
+          className={!show?'after':""}
           onChange={handleInputChange}
           onClick={(e)=>makeTrue(e)}
        
@@ -70,7 +70,7 @@ const [show,setShow]=useState(false)
           type="time"
           name="start_time"
           value={form.start_time}
-          className={!type?'after':""}
+          className={!show?'after':""}
           onChange={handleInputChange}
           onClick={(e)=>makeTrue(e)}
           placeholder='Starting time'
@@ -80,7 +80,7 @@ const [show,setShow]=useState(false)
         <input
           type="date"
           name="end_date"
-          className={!type?'after':""}
+          className={!show?'after':""}
           value={form.end_date}
           onChange={handleInputChange}
           onClick={(e)=>makeTrue(e)}
@@ -91,7 +91,7 @@ const [show,setShow]=useState(false)
         <input
           type="time"
           name="end_time"
-          className={!type?'after':""}
+          className={!show?'after':""}
           value={form.end_time}
           onChange={handleInputChange}
           onClick={(e)=>makeTrue(e)}
