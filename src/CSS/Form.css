@@ -273,6 +273,9 @@ line-height: 150%;
       background:url("https://cdn-icons-png.flaticon.com/512/32/32195.png?w=740&t=st=1685741790~exp=1685742390~hmac=afacf4659f1915f70b1887c0f482d0da0ea2785eea1198a7cb29e010d397de9a")
     no-repeat 92%  / 1rem auto;
     }
+    input::-webkit-datetime-edit-fields-wrapper{
+      color:black;
+    }
     
     
   
