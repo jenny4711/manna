@@ -278,8 +278,8 @@ line-height: 150%;
    
     input[type="date"]:valid{
       color:black;
-      margin-top:1rem;
-      margin-right:1rem;
+      padding-top:1rem;
+      padding-right:1rem;
     
     }
     
@@ -287,9 +287,8 @@ line-height: 150%;
 
     input[type="time"]:valid{
       color:black;
-      margin-top:1rem;
-      margin-right:1rem;
-    
+      padding-top:1rem;
+      padding-right:1rem;
     }
     
     .after[type="time"]:valid{color:white;}
