@@ -245,10 +245,13 @@ line-height: 150%;
     }
 
     
-    .Form-form input,.Form-form .diff,label{
+    .Form-form input,.Form-form {
       width:90vw;
     margin-left:0.3rem;
   
+    }
+    .diff,label{
+      width:90vw;
     }
     .Form-form button{
       width:90vw;
@@ -268,11 +271,11 @@ line-height: 150%;
     /* text-align: baseline; */
     
     }
-    .Form-form input:after{
+    /* .Form-form input:after{
       left:89%;
      
     }
-   
+    */
     select{
       background:url("https://cdn-icons-png.flaticon.com/512/32/32195.png?w=740&t=st=1685741790~exp=1685742390~hmac=afacf4659f1915f70b1887c0f482d0da0ea2785eea1198a7cb29e010d397de9a")
     no-repeat 92%  / 1rem auto;
@@ -297,16 +300,6 @@ line-height: 150%;
     .after[type="time"]:valid{color:white;}
     
 
-    .Form-form input[type="date"], input[type="time"]{
-      display:flex;
-      align-items: center;
-      justify-content: flex-start;
-      text-align: --webkit-center;
-     
-     
-
-
-    }
 
    
 

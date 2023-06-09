@@ -86,7 +86,7 @@ setSelectedDate(date)
         /> */}
      
      </label>
-      <label data-domain="Starting time" className={!show?'diff':""}  style={{justifyContent:'flex-start'}}>
+      <label data-domain="Starting time" className={!show?'diff':""}>
         <input
           type="time"
           name="start_time"
