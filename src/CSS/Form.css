@@ -234,8 +234,13 @@ line-height: 150%;
 }
 
 @media (max-width: 782px) {
- 
-  
+ #picker{
+  height:50%;
+ }
+  .d{
+    border:2px solid black;
+    /* margin-left:0.3rem; */
+  }
     .Form-form h1{
       margin-left:10px;
     }
@@ -247,7 +252,7 @@ line-height: 150%;
     
     .Form-form input,.Form-form .diff,label{
       width:90vw;
-    margin-left:0.3rem;
+    /* margin-left:0.3rem; */
   
     }
     .Form-form button{
@@ -303,6 +308,7 @@ line-height: 150%;
       justify-content: flex-start;
       text-align: --webkit-center;
       width:100%;
+      height:80%;
       border:none;
      
      

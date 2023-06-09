@@ -86,7 +86,7 @@ setSelectedDate(date)
         /> */}
      
      </label>
-      <label data-domain="Starting time" className={!show?'diff':""}>
+      <label data-domain="Starting time" className={!show?'diff d':"d"}>
         <input
           type="time"
           name="start_time"
