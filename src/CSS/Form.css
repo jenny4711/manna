@@ -41,7 +41,7 @@ label {
 background-color: #FFFFFF;
   position: relative;
   display: block;
-  padding-right: 76px;
+  /* padding-right: 76px; */
 
   box-sizing: border-box;
   margin-bottom: 1rem;
