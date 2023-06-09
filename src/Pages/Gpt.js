@@ -28,7 +28,7 @@ function Gpt({ show, setShow, login }) {
     name: "",
     amt: "",
     item: "",
-    start_date: "",
+    start_date: new Date(),
     start_time: "",
     end_date: "",
     end_time: "",
@@ -44,7 +44,8 @@ function Gpt({ show, setShow, login }) {
   // const [item, setItem] = useState(sample);
   const dispatch = useDispatch();
 
-  const handleChange = () => {
+  const handleChange = (e) => {
+e.preventDefault()
     setMessage(`You are promotion post creator. 
        create a ${form.campaign_type} promotion post. 
        The business name is ${form.name}, 
