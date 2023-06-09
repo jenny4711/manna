@@ -291,7 +291,7 @@ line-height: 150%;
     
     .after[type="time"]:valid{color:white;}
 
-    .Form-form input[type="date"]::after, input[type="time"]{
+    .Form-form input[type="date"], input[type="time"]{
       display:flex;
       align-items: center;
       justify-content: flex-start;
