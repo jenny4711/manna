@@ -301,7 +301,10 @@ line-height: 150%;
 
 
     }
-    
+
+    .Form-form input{
+      padding-left:0px;
+    }
 
   }
 
