@@ -93,7 +93,8 @@ setSelectedDate(date)
           value={form.start_time}
           className={!show?'after':""}
           onChange={handleInputChange}
-          style={{marginRight:'5rem'}}
+          style={{width:'50rem'}}
+          autoComplete='false'
           onClick={(e)=>makeTrue(e)}
           placeholder='Starting time'
         />
