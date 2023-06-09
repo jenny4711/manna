@@ -218,7 +218,7 @@ line-height: 150%;
 
 
 
-.form button {
+.form-btn {
   font-family: 'Nunito Sans';
   width: 48vw;
   height: 75px;
@@ -228,6 +228,9 @@ font-size: 16px;
 line-height: 150%;
   background-color: #ffdc60;
   border:2px solid black;
+}
+.react-datepicker__navigation react-datepicker__navigation--next {
+  display:none;
 }
 
 @media (max-width: 782px) {
@@ -298,7 +301,7 @@ line-height: 150%;
       display:flex;
       align-items: center;
       justify-content: flex-start;
-      text-align: -webkit-center;
+      text-align: --webkit-center;
      
      
 

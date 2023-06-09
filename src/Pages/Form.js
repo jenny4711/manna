@@ -1,17 +1,24 @@
 import React,{useState} from "react";
 import "../CSS/Form.css";
 
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+ 
+// CSS Modules, react-datepicker-cssmodules.css// 
+// import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 
 
 function Form({ setForm, form,handleChange,chat,message }) {
+  const [selectedDate,setSelectedDate] = useState(null);
 const [type,setType]=useState(false)
 const [show,setShow]=useState(false)
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e,date) => {
     const fieldName = e.target.name;
     const value = e.target.value;
     setForm(fieldName, value);
     setShow(true)
+setSelectedDate(date)
     
   };
 
@@ -51,9 +58,21 @@ const [show,setShow]=useState(false)
          
         />
       </label>
+
       <label data-domain="Starting date"  className={!show?'diff':""}>
-       
-        <input
+      <DatePicker
+  selected={selectedDate}
+  onChange={(date) => handleInputChange({ target: { name: "start_date", value: date } }, date)}
+  dateFormat='MM/dd/yyyy'
+  minDate={new Date()}
+  name="start_date"
+  value={form.start_date}
+  onClick={(e) => makeTrue(e)}
+  showTimeInput={false}
+/>
+    
+
+        {/* <input
           type="date"
           name="start_date"
           value={form.start_date}
@@ -64,9 +83,9 @@ const [show,setShow]=useState(false)
           onClick={(e)=>makeTrue(e)}
        
           
-        />
+        /> */}
      
-      </label>
+     </label>
       <label data-domain="Starting time" className={!show?'diff':""}>
         <input
           type="time"
@@ -118,7 +137,7 @@ const [show,setShow]=useState(false)
           
           </select>
       </label>
-      <button onClick={handleChange}>Generate</button>
+      <button className='form-btn' onClick={handleChange}>Generate</button>
       </form>
     </>
   );
