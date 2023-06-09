@@ -290,11 +290,16 @@ line-height: 150%;
     }
     
     .after[type="time"]:valid{color:white;}
-
-    .Form-form input[type="date"], input[type="time"]{
-      display:flex;
+    .Form-form label {
+      display: flex;
       align-items: center;
       justify-content: flex-start;
+    }
+
+    .Form-form input[type="date"], input[type="time"]{
+      /* display:flex;
+      align-items: center;
+      justify-content: flex-start; */
       margin-left:auto;
      
 
