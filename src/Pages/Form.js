@@ -54,7 +54,7 @@ const [show,setShow]=useState(false)
       <label data-domain="Starting date"  className={!show?'diff':""}>
        
         <input
-          type="date"
+          type="text"
           name="start_date"
           value={form.start_date}
           autoComplete='off'
