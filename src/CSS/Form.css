@@ -278,8 +278,7 @@ line-height: 150%;
    
     input[type="date"]:valid{
       color:black;
-      padding-top:1rem;
-      padding-right:1rem;
+    
     
     }
     
@@ -296,7 +295,8 @@ line-height: 150%;
       display:flex;
       align-items: center;
       justify-content: flex-start;
-      padding-left:-3rem;
+      margin-right:2rem;
+      flex-wrap: wrap;
 
 
     }
