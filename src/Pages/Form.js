@@ -58,6 +58,7 @@ const [show,setShow]=useState(false)
           name="start_date"
           value={form.start_date}
           autoComplete='off'
+          autoCorrect='off'
           className={!show?'after':""}
           onChange={handleInputChange}
           onClick={(e)=>makeTrue(e)}
