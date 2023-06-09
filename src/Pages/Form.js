@@ -86,14 +86,14 @@ setSelectedDate(date)
         /> */}
      
      </label>
-      <label data-domain="Starting time" className={!show?'diff':""}>
+      <label data-domain="Starting time" className={!show?'diff':""}  style={{justifyContent:'flex-start'}}>
         <input
           type="time"
           name="start_time"
           value={form.start_time}
           className={!show?'after':""}
           onChange={handleInputChange}
-          style={{justifyContent:'flex-start'}}
+         
           autoComplete='false'
           onClick={(e)=>makeTrue(e)}
           placeholder='Starting time'
