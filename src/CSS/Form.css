@@ -262,7 +262,7 @@ line-height: 150%;
     display:flex;
     flex-wrap:wrap;
     justify-content: center;
-    text-align: baseline;
+    /* text-align: baseline; */
     
     }
     .Form-form input:after{
