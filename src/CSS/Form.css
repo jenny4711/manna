@@ -294,7 +294,7 @@ line-height: 150%;
 
     .Form-form input[type="date"], input[type="time"]{
       display:flex;
-      align-items: center;
+      /* align-items: center; */
       justify-content: flex-start;
       flex-direction:row;
      
@@ -302,9 +302,7 @@ line-height: 150%;
 
     }
 
-    .Form-form input{
-      padding-left:0px;
-    }
+   
 
   }
 
