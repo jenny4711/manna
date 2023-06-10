@@ -45,7 +45,7 @@ function Gpt({ show, setShow, login }) {
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
-e.preventDefault()
+// e.preventDefault()
     setMessage(`You are promotion post creator. 
        create a ${form.campaign_type} promotion post. 
        The business name is ${form.name}, 
@@ -72,10 +72,12 @@ e.preventDefault()
       ...prevForm,
       [fieldName]: value,
     }));
+    console.log('hey')
   };
 
   const chat = async (e, message) => {
     e.preventDefault();
+    console.log(e,'eeeeeeeeeeeee')
     setIsTyping(true);
     let msgs = chats;
     console.log(msgs,'ddd')

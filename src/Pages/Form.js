@@ -19,6 +19,7 @@ const [show,setShow]=useState(false)
     const value = e.target.value;
     setForm(fieldName, value);
     setShow(true)
+    console.log(form)
     
   };
 
