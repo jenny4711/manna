@@ -38,31 +38,32 @@
   .Form-form input,
   label {
    
-    width: 100%;
+     width: 100%;
     height: 70px;
   background-color: #FFFFFF;
     position: relative;
     display: block;
-    /* padding-right: 76px; */
-  
+     /* padding-right: 76px;  */
+
     box-sizing: border-box;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem;  
   }
   .Form-form input{
-    padding-left:1rem;
-    padding-top:1.5rem;
+     padding-left:1rem;
+    padding-top:1.5rem; 
   }
 
   .Form-form input {
-    border: 2px solid black;
+     border: 2px solid black;
     border-radius:3px;
   font-family: 'Nunito Sans', sans-serif;
   width:100%;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 150%; 
   }
+ 
   .diff,.after{
     color:rgba(0,0,0,0)
   }
@@ -93,37 +94,7 @@
     color: rgba(80, 77, 77, 0.6);
     font-weight: bold;
   }
-  /* input[type="date"], input[type="time"]{
-    position: relative;
-    min-height: 30px;
   
-  
-    font-size: 30px;
-  } */
-  /* input[type="date"]::-webkit-calendar-picker-indicator {
-    position: absolute;
-    top: 0;
-    left: 5;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    color: transparent;
-    cursor: pointer;
-  
-    z-index: 1;
-  } */
-  /* input[type="time"]::-webkit-calendar-picker-indicator {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    color: transparent;
-    cursor: pointer;
-  
-    z-index: 1;
-  } */
   .select-type
   {
     width: 100%;
@@ -167,24 +138,15 @@
     z-index: 0;
    
   }
-  /* input[type="date"]::-webkit-clear-button,
-  input[type="date"]::-webkit-inner-spin-button {
-    display: none;
-  } */
-  input[type="time"]::-webkit-clear-button,
-  input[type="time"]::-webkit-inner-spin-button {
-    display: none;
-  }
  
-  
  
   .Form-form .react-ios-time-picker-input:after {
     position: absolute;
     top: 50%;
     left: 97%;
     content: "";
-    width: 20px;
-    height: 22px;
+    width: 22px;
+    height: 22px; 
   
     background: #fff
       url("https://cdn-icons-png.flaticon.com/512/32/32195.png?w=740&t=st=1685741790~exp=1685742390~hmac=afacf4659f1915f70b1887c0f482d0da0ea2785eea1198a7cb29e010d397de9a")
@@ -206,25 +168,26 @@
     height: 2rem;
   
     margin: 0 auto;
-    padding: 0;
+    padding: 0; 
   
     background: url("https://cdn-icons-png.flaticon.com/512/32/32195.png?w=740&t=st=1685741790~exp=1685742390~hmac=afacf4659f1915f70b1887c0f482d0da0ea2785eea1198a7cb29e010d397de9a")
-    no-repeat 98%   / 1rem auto;
+    no-repeat 97%   / 1rem auto;
   }
+  
   .react-datepicker__input-container input {
     position: relative;
     font-size: 15px;
     
      border: none;
    color:black;
-    /* width: 29rem; */
+    width: 100%;
     /* height: 2rem;
    */
     margin: 0 auto;
     padding-left: 7;
   
     background: url("https://cdn-icons-png.flaticon.com/512/32/32195.png?w=740&t=st=1685741790~exp=1685742390~hmac=afacf4659f1915f70b1887c0f482d0da0ea2785eea1198a7cb29e010d397de9a")
-    no-repeat 99%   / 1rem auto;
+    no-repeat 97%   / 1rem auto;
 
   }
  
@@ -245,14 +208,21 @@
   }
   
    */
+   /* date section width and margin */
    label[data-domain="Ending date"],label[data-domain="Starting date"]{
     border:2px solid black;
     border-radius:3px;
+    width:100%;
+    margin-right:1rem;
+    margin-left:1rem;
+
+   
    }
+  
   
   .form button {
     font-family: 'Nunito Sans';
-    width: 48vw;
+    width: 45vw;
     height: 75px;
   font-style: normal;
   font-weight: 700;
@@ -268,10 +238,28 @@
   ::-webkit-input-placeholder {
     color:white;
   }
+  .react-datepicker {
+   width: 15px; /* 원하는 여백 크기로 조정 */
+  }
+
+  .react-datepicker__month {
+    margin: 0.4em;
+    text-align: center;
+    background-color: white;
+}
 
   @media (max-width: 782px) {
-   
     
+   label[data-domain="Ending date"],label[data-domain="Starting date"]{
+    border:2px solid black;
+    border-radius:3px;
+    width:90%;
+
+   
+   }
+    .after{
+      background-color: red;
+     }
       .Form-form h1{
         margin-left:10px;
       }
@@ -281,8 +269,8 @@
       }
   
       
-      .Form-form input,.Form-form .diff,label{
-        width:90vw;
+      .Form-form input,.Form-form .diff,label,.select-type{
+        width:100%;
       margin-left:0.3rem;
     
       }
@@ -292,14 +280,14 @@
     
       }
       .select-type{
-      width:90vw;
+      /* width:90vw; */
     margin-left:0.3rem;
     }
     
      .Form-form{
-      width:80vw;
+      width:90%;
       display:flex;
-      flex-wrap:wrap;
+      /* flex-wrap:wrap; */
       justify-content: center;
       /* text-align: baseline; */
       
@@ -317,7 +305,7 @@
 
 
       .react-ios-time-picker-input{
-        /* position: relative;
+         position: relative;
         font-size: 0;
          border: none;
        
@@ -325,7 +313,7 @@
         height: 2rem;
       
         margin: 0 auto;
-        padding: 0; */
+        padding: 0; 
       
         background: url("https://cdn-icons-png.flaticon.com/512/32/32195.png?w=740&t=st=1685741790~exp=1685742390~hmac=afacf4659f1915f70b1887c0f482d0da0ea2785eea1198a7cb29e010d397de9a")
         no-repeat 91%   / 1rem auto;
@@ -338,8 +326,8 @@
         width: 29rem;
         /* height: 2rem;
        */
-        /* margin: 0 auto;
-        padding: 0; */ 
+         margin: 0 auto;
+        padding: 0; 
       
         background: url("https://cdn-icons-png.flaticon.com/512/32/32195.png?w=740&t=st=1685741790~exp=1685742390~hmac=afacf4659f1915f70b1887c0f482d0da0ea2785eea1198a7cb29e010d397de9a")
         no-repeat 91%   / 1rem auto;
