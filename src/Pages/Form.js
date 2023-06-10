@@ -10,7 +10,7 @@ import { TimePicker } from 'react-ios-time-picker';
 
 
 
-function Form({ setForm, form,handleChange,chat,message,startDate,setStartDate ,value,setValue}) {
+function Form({ setForm, form,handleChange,chat,message,startDate,setStartDate ,value,setValue,startDate1,setStartDate1 ,value1,setValue1}) {
 const [type,setType]=useState(false)
 const [show,setShow]=useState(false)
 
@@ -31,6 +31,9 @@ const [show,setShow]=useState(false)
   const onChange = (timeValue) => {
     setValue(timeValue);
  }
+ const onChange1 = (timeValue) => {
+  setValue1(timeValue);
+}
 
   return (
     <>
@@ -98,7 +101,12 @@ const [show,setShow]=useState(false)
 
       </label>
       <label data-domain="Ending date" className={!show?'diff':""}>
-        <input
+      <DatePicker 
+        selected={startDate1} 
+        onChange={(date) => setStartDate1(date)}  
+        name="end_date"
+    /> 
+        {/* <input
           type="date"
           name="end_date"
           className={!show?'after':""}
@@ -106,10 +114,11 @@ const [show,setShow]=useState(false)
           onChange={handleInputChange}
           onClick={(e)=>makeTrue(e)}
           placeholder='Ending date'
-        />
+        /> */}
       </label>
       <label data-domain="Ending time" className={!show?'diff':""}>
-        <input
+      <TimePicker onChange1={onChange1} value={value1} />
+        {/* <input
           type="time"
           name="end_time"
           className={!show?'after':""}
@@ -117,7 +126,7 @@ const [show,setShow]=useState(false)
           onChange={handleInputChange}
           onClick={(e)=>makeTrue(e)}
           placeholder='Ending time'
-        />
+        /> */}
       </label>
 
       <label data-domain="Campaign type" className={!show?'diff':""}>
