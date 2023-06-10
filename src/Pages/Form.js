@@ -6,7 +6,7 @@ import "../CSS/Form.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { TimePicker } from 'react-ios-time-picker';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 
@@ -30,9 +30,11 @@ const [show,setShow]=useState(false)
   }
   const onChange = (timeValue) => {
     setValue(timeValue);
+    setShow(true)
  }
  const onChange1 = (timeValue) => {
   setValue1(timeValue);
+  setShow(true)
 }
 
   return (
@@ -71,8 +73,10 @@ const [show,setShow]=useState(false)
         selected={startDate} 
         onChange={(date) => setStartDate(date)}  
         name="start_date"
+        className='after'
+        onClick={(e)=>makeTrue(e)}
     />  
-       
+      
         {/* <input
           type="date"
           name="start_date"
@@ -87,6 +91,7 @@ const [show,setShow]=useState(false)
      
       </label>
       <label data-domain="Starting time" className={!show?'diff':""}>
+     
         {/* <input
           type="time"
           name="start_time"
@@ -97,7 +102,7 @@ const [show,setShow]=useState(false)
           placeholder='Starting time'
         /> */}
       
-      <TimePicker onChange={onChange} value={value} />
+      <TimePicker onChange={onChange} value={value}  className='after' />
 
       </label>
       <label data-domain="Ending date" className={!show?'diff':""}>
@@ -105,6 +110,7 @@ const [show,setShow]=useState(false)
         selected={startDate1} 
         onChange={(date) => setStartDate1(date)}  
         name="end_date"
+        className='after'
     /> 
         {/* <input
           type="date"
@@ -117,7 +123,7 @@ const [show,setShow]=useState(false)
         /> */}
       </label>
       <label data-domain="Ending time" className={!show?'diff':""}>
-      <TimePicker onChange1={onChange1} value={value1} />
+      <TimePicker onChange1={onChange1} value={value1}  className='after' />
         {/* <input
           type="time"
           name="end_time"
