@@ -28,7 +28,7 @@ function Gpt({ show, setShow, login }) {
     name: "",
     amt: "",
     item: "",
-    start_date: new Date(),
+    start_date:null,
     start_time: "",
     end_date: "",
     end_time: "",
@@ -38,6 +38,7 @@ function Gpt({ show, setShow, login }) {
   const [message, setMessage] = useState("");
   const [chats, setChats] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
+  const [startDate, setStartDate] = useState(null);  
 
   const { msgs, info, user } = useSelector((state) => state.gpt);
   // const [getInfo, setGetInfo] = useState(null);
@@ -51,7 +52,7 @@ function Gpt({ show, setShow, login }) {
        The business name is ${form.name}, 
        Promotion is ${form.amt} , 
        Promotion item is ${form.item}, 
-       Starting date ${form.start_date},
+       Starting date ${startDate},
        Starting time is ${form.start_time},
         Until ${form.end_date},
          ${form.end_time}  `);
@@ -60,11 +61,12 @@ function Gpt({ show, setShow, login }) {
       name: "",
       amt: "",
       item: "",
-      start_date: "",
+      start_date: startDate,
       start_time: "",
       end_date: "",
       end_time: "",
     });
+    setStartDate(null)
   };
 
   const handleFormChange = (fieldName, value) => {
@@ -121,6 +123,8 @@ function Gpt({ show, setShow, login }) {
             form={form}
             chat={chat}
             message={message}
+            startDate={startDate}
+            setStartDate={setStartDate}
           />
         </div>
 

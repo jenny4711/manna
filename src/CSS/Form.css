@@ -232,6 +232,9 @@
     background-color: #ffdc60;
     border:2px solid black;
   }
+  .react-datepicker button{
+    display:none;
+  }
   
   @media (max-width: 782px) {
    
@@ -307,6 +310,7 @@
   
   
       }
+
   
      
   

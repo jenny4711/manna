@@ -1,18 +1,20 @@
 import  React,{useState} from "react";
 import "../CSS/Form.css";
+
 // import 'configurable-date-input-polyfill';
 
-// import DatePicker from "react-datepicker";
-// import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
  
 
 
 
 
 
-function Form({ setForm, form,handleChange,chat,message }) {
+function Form({ setForm, form,handleChange,chat,message,startDate,setStartDate }) {
 const [type,setType]=useState(false)
 const [show,setShow]=useState(false)
+
 
   const handleInputChange = (e) => {
     const fieldName = e.target.name;
@@ -60,8 +62,13 @@ const [show,setShow]=useState(false)
         />
       </label>
       <label data-domain="Starting date"  className={!show?'diff':""}>
+      <DatePicker 
+        selected={startDate} 
+        onChange={(date) => setStartDate(date)}  
+        name="start_date"
+    />  
        
-        <input
+        {/* <input
           type="date"
           name="start_date"
           value={form.start_date}
@@ -71,7 +78,7 @@ const [show,setShow]=useState(false)
           onClick={(e)=>makeTrue(e)}
        
           
-        />
+        /> */}
      
       </label>
       <label data-domain="Starting time" className={!show?'diff':""}>
