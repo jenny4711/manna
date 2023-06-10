@@ -235,7 +235,13 @@
   .react-datepicker button{
     display:none;
   }
-  
+  .react-time-picker__wrapper button{
+    display:none;
+  }
+  ::-webkit-input-placeholder {
+    color:white;
+  }
+
   @media (max-width: 782px) {
    
     

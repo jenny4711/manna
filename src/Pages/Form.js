@@ -5,13 +5,12 @@ import "../CSS/Form.css";
 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
- 
+import { TimePicker } from 'react-ios-time-picker';
 
 
 
 
-
-function Form({ setForm, form,handleChange,chat,message,startDate,setStartDate }) {
+function Form({ setForm, form,handleChange,chat,message,startDate,setStartDate ,value,setValue}) {
 const [type,setType]=useState(false)
 const [show,setShow]=useState(false)
 
@@ -29,6 +28,9 @@ const [show,setShow]=useState(false)
    setType(true)
    setShow(true)
   }
+  const onChange = (timeValue) => {
+    setValue(timeValue);
+ }
 
   return (
     <>
@@ -82,7 +84,7 @@ const [show,setShow]=useState(false)
      
       </label>
       <label data-domain="Starting time" className={!show?'diff':""}>
-        <input
+        {/* <input
           type="time"
           name="start_time"
           value={form.start_time}
@@ -90,7 +92,10 @@ const [show,setShow]=useState(false)
           onChange={handleInputChange}
           onClick={(e)=>makeTrue(e)}
           placeholder='Starting time'
-        />
+        /> */}
+      
+      <TimePicker onChange={onChange} value={value} />
+
       </label>
       <label data-domain="Ending date" className={!show?'diff':""}>
         <input
