@@ -1,24 +1,24 @@
-import import React,{useState} from "react";
+import  React,{useState} from "react";
 import "../CSS/Form.css";
+// import 'configurable-date-input-polyfill';
 
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+// import DatePicker from "react-datepicker";
+// import "react-datepicker/dist/react-datepicker.css";
  
-// CSS Modules, react-datepicker-cssmodules.css// 
-// import 'react-datepicker/dist/react-datepicker-cssmodules.css';
+
+
+
 
 
 function Form({ setForm, form,handleChange,chat,message }) {
-  const [selectedDate,setSelectedDate] = useState(null);
 const [type,setType]=useState(false)
 const [show,setShow]=useState(false)
 
-  const handleInputChange = (e,date) => {
+  const handleInputChange = (e) => {
     const fieldName = e.target.name;
     const value = e.target.value;
     setForm(fieldName, value);
     setShow(true)
-setSelectedDate(date)
     
   };
 
@@ -58,43 +58,27 @@ setSelectedDate(date)
          
         />
       </label>
-
       <label data-domain="Starting date"  className={!show?'diff':""}>
-      <DatePicker
-  selected={selectedDate}
-  onChange={(date) => handleInputChange({ target: { name: "start_date", value: date } }, date)}
-  dateFormat='MM/dd/yyyy'
-  minDate={new Date()}
-  name="start_date"
-  value={form.start_date}
-  onClick={(e) => makeTrue(e)}
-  showTimeInput={false}
-/>
-    
-
-        {/* <input
+       
+        <input
           type="date"
           name="start_date"
           value={form.start_date}
-          autoComplete='off'
-          autoCorrect='off'
           className={!show?'after':""}
           onChange={handleInputChange}
           onClick={(e)=>makeTrue(e)}
        
           
-        /> */}
+        />
      
-     </label>
-      <label data-domain="Starting time" className={!show?'diff d':"d"}>
+      </label>
+      <label data-domain="Starting time" className={!show?'diff':""}>
         <input
           type="time"
           name="start_time"
           value={form.start_time}
           className={!show?'after':""}
           onChange={handleInputChange}
-         
-          autoComplete='false'
           onClick={(e)=>makeTrue(e)}
           placeholder='Starting time'
         />
@@ -139,7 +123,7 @@ setSelectedDate(date)
           
           </select>
       </label>
-      <button className='form-btn' onClick={handleChange}>Generate</button>
+      <button onClick={handleChange}>Generate</button>
       </form>
     </>
   );

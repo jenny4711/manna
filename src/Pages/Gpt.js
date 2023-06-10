@@ -78,6 +78,7 @@ e.preventDefault()
     e.preventDefault();
     setIsTyping(true);
     let msgs = chats;
+    console.log(msgs,'ddd')
     setMessage({ role: "user", content: message });
     setChats(msgs);
 
