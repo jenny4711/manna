@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: column;
   width:50vw;
-  height:100vh;
+  /* height:100vh; */
 
   justify-content: flex-start;
   align-items: center;
@@ -110,16 +110,30 @@ label,.select-type,.form button{
 
 } */
 @media (max-width: 782px) {
+  .App-div {
+    flex-direction: column;
+  }
  
 .result-text,.result-div button{
   width:90vw;
 }
 
  .result{
-  margin-top:3rem;
+
 border:none;
 border-top:1px solid black;
   
+ }
+ .gpt_history{
+  display:flex;
+  justify-content: center;
+  width:100%;
+  margin-top:1rem;
+
+ }
+ .History{
+  width:90%;
+  margin-top:1rem;
  }
   .App-div {
     flex-direction: column;
@@ -128,10 +142,9 @@ border-top:1px solid black;
   
   }
  
-  .select-type{
-  width:90vw;
-/* margin-left:0.2rem; */
-}
+ .btns{
+  width:90%;
+ }
 
 
 }
