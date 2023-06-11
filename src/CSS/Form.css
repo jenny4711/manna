@@ -250,61 +250,66 @@
 
   @media (max-width: 782px) {
     
+.form,.result{
+  width:100%;
+  display:flex;
+  justify-content: center;
+}
+.Form-form{
+
+}
+
+    /* ----------------------------- */
    label[data-domain="Ending date"],label[data-domain="Starting date"]{
-    border:2px solid black;
+    /* border:2px solid black;
     border-radius:3px;
-    width:90%;
+    width:90%; */
 
    
    }
-    .after{
-      background-color: red;
-     }
-      .Form-form h1{
+   
+      /* .Form-form h1{
         margin-left:10px;
-      }
-      .form,.result{
+      } */
+      /* .form,.result{
         width:98vw;
         margin-left: 0.5rem;
       }
-  
+   */
       
-      .Form-form input,.Form-form .diff,label,.select-type{
+      /* .Form-form input,.Form-form .diff,label,.select-type{
         width:100%;
       margin-left:0.3rem;
     
-      }
-      .Form-form button{
+      } */
+       .Form-form button{
         width:90vw;
-        margin-left:0.6rem;
+        /* margin-left:0.6rem; */
     
-      }
-      .select-type{
-      /* width:90vw; */
-    margin-left:0.3rem;
-    }
+      } 
+     
     
-     .Form-form{
+     /* .Form-form{
       width:90%;
       display:flex;
-      /* flex-wrap:wrap; */
+    
       justify-content: center;
-      /* text-align: baseline; */
+    
       
-      }
-      .Form-form input:after{
+      } */
+      /* .Form-form input:after{
         left:89%;
        
-      }
+      } */
      
-      select{
+      /* select{
         background:url("https://cdn-icons-png.flaticon.com/512/32/32195.png?w=740&t=st=1685741790~exp=1685742390~hmac=afacf4659f1915f70b1887c0f482d0da0ea2785eea1198a7cb29e010d397de9a")
       no-repeat 92%  / 1rem auto;
       }
+ */
 
 
-
-      .react-ios-time-picker-input{
+      /* .react-ios-time-picker-input{
          position: relative;
         font-size: 0;
          border: none;
@@ -317,54 +322,37 @@
       
         background: url("https://cdn-icons-png.flaticon.com/512/32/32195.png?w=740&t=st=1685741790~exp=1685742390~hmac=afacf4659f1915f70b1887c0f482d0da0ea2785eea1198a7cb29e010d397de9a")
         no-repeat 91%   / 1rem auto;
-      }
-      .react-datepicker__input-container input {
-        /* position: relative;
-        font-size: 0;
-         border: none;
+      } */
+      /* .react-datepicker__input-container input {
        
-        width: 29rem;
-        /* height: 2rem;
-       */
          margin: 0 auto;
         padding: 0; 
       
         background: url("https://cdn-icons-png.flaticon.com/512/32/32195.png?w=740&t=st=1685741790~exp=1685742390~hmac=afacf4659f1915f70b1887c0f482d0da0ea2785eea1198a7cb29e010d397de9a")
         no-repeat 91%   / 1rem auto;
     
-      }
+      } */
   
      
-      input[type="date"]:valid{
+      /* input[type="date"]:valid{
         color:black;
         font-size:20px;
       
       
-      }
+      } */
       
-      .after[type="date"]:valid{color:white;}
+      /* .after[type="date"]:valid{color:white;}
   
       input[type="time"]:valid{
         color:black;
        
        
       }
+       */
+      /* .after[type="time"]:valid{color:white;} */
       
-      .after[type="time"]:valid{color:white;}
-      
   
-      /* .Form-form input[type="date"], input[type="time"]{
-        display:flex;
-        align-items: center;
-        justify-content: flex-start;
-        flex-direction:row;
-       
-       
-  
-  
-      } */
-
-  
+     
      
   
     }
