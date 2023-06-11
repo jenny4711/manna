@@ -44,7 +44,9 @@
     .justify-content-end{
       margin-left:10%;
     }
-    
+    .navbar>.container {
+      margin-left:0.5rem;
+    }
   
   
   }
