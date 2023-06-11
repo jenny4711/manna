@@ -51,7 +51,7 @@ const navigate=useNavigate()
     <div className='Log'>
       <h1>Login</h1>
       <form className='login' onSubmit={handleSubmit}>
-      <FloatingLabel
+      {/* <FloatingLabel
         controlId="floatingInput"
         label="Email address"
         className="mb-3"
@@ -73,7 +73,31 @@ const navigate=useNavigate()
         value={data.password}
         onChange={handleChange}
         />
-      </FloatingLabel>
+      </FloatingLabel> */}
+   <Form.Floating className="mb-3">
+        <Form.Control
+          id="floatingInputCustom"
+          type="email"
+          placeholder="name@example.com"
+          name="email"
+          value={data.email}
+          onChange={handleChange}
+        />
+        <label htmlFor="floatingInputCustom">Email address</label>
+      </Form.Floating>
+      <Form.Floating>
+        <Form.Control
+          id="floatingPasswordCustom"
+          type="password"
+          placeholder="Password"
+          name="password"
+          value={data.password}
+          onChange={handleChange}
+        />
+        <label htmlFor="floatingPasswordCustom">Password</label>
+      </Form.Floating>
+
+
       <button className='loginBtn'>Submit</button>
       </form>
 

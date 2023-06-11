@@ -13,7 +13,7 @@ const Navb = ({ login, setShow, logOut }) => {
   const dispatch = useDispatch();
 
   const logOutKey = (e) => {
-    if (e.target.className === "logout") {
+    if (e.target.className === "Logout") {
       logOut();
     }
   };
@@ -43,7 +43,7 @@ const Navb = ({ login, setShow, logOut }) => {
           </Nav.Link>
           <Nav.Link
             onClick={(e) => logOutKey(e)}
-            className={login ? "logout" : "login"}
+            className={login ? "Logout" : "Login"}
             href="/login"
           >
             {login ? "LogOut" : "LogIn"}

@@ -1,4 +1,5 @@
 /* Navb.js */
+
 .navbar-expand{
 
   border: 2px solid black;
@@ -19,7 +20,7 @@
   flex-wrap:wrap;
   justify-content: flex-start;
   margin-right: 62rem;
-  margin-left:1rem;
+  margin-left:2rem;
 
  
  

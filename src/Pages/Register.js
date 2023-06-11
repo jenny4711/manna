@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { gptAction } from '../redux/actions/msgAction';
 import '../CSS/Log.css'
+import Form from 'react-bootstrap/Form';
 
 const Register = () => {
   let sample={
@@ -32,9 +33,31 @@ const Register = () => {
     <div className='Register'>
       <h1>Register</h1>
       <form className='register' onSubmit={handleSubmit}>
-        <input name="email" type="text" value={info.email} onChange={handleChange} placeholder='Email'/>
-        <input name="password" type="text" value={info.password} onChange={handleChange} placeholder='Password' />
-  <button className='registerBtn'>Submit</button>
+      <Form.Floating className="mb-3">
+        <Form.Control
+          id="floatingInputCustom"
+          type="email"
+          placeholder="name@example.com"
+          name="email"
+          value={info.email}
+          onChange={handleChange}
+        />
+        <label htmlFor="floatingInputCustom">Email address</label>
+      </Form.Floating>
+      <Form.Floating>
+        <Form.Control
+          id="floatingPasswordCustom"
+          type="password"
+          placeholder="Password"
+          name="password"
+          value={info.password}
+          onChange={handleChange}
+        />
+        <label htmlFor="floatingPasswordCustom">Password</label>
+      </Form.Floating>
+        {/* <input name="email" type="text" value={info.email}  onChange={handleChange} placeholder='Email'/>
+        <input name="password" type="text" value={info.password}  onChange={handleChange} placeholder='Password' /> */}
+        <button className='registerBtn'>Submit</button>
       </form>
     </div>
   )
