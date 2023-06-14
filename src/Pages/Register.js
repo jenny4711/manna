@@ -20,6 +20,10 @@ const Register = ({setLogin}) => {
   console.log(info,'register info') 
   console.log(token,'register info')
 
+  useEffect(()=>{
+    setGetToken(token);
+  },[token])
+
   const handleChange = async (e)=>{
     const {name,value}=e.target;
     setItem({...item,[e.target.name]:e.target.value});
@@ -31,17 +35,31 @@ const Register = ({setLogin}) => {
   const handleSubmit=async(e)=>{
     e.preventDefault();
     setInfo(sample);
-    dispatch(gptAction.register(info))
-  
-    setGetToken(token);
-   
-    if (token !== null) {
-      const email = info.email || "";
-      navigate(`/:${email}`);
-      setLogin(true);
-    } else {
-      navigate("/");
+    try{
+      let res= await dispatch(gptAction.register(info))
+      console.log(!getToken,'register info')
+      console.log(!res,'true?')
+      console.log(res,'res?')
+      console.log(token,'tt')
+      console.log(item)
+      if(!res){
+        navigate('/register')
+       alert('Please Register Again')
+      }else{
+        await dispatch(gptAction.getMsg(item?.email));
+        await dispatch(gptAction.login(item));
+        setGetToken(token);
+        setLogin(true);
+       
+        navigate(`/:item?.email `);
+      }
+    }catch (error){
+      console.log(error)
+      
+      navigate("/")
     }
+   
+  
     
   }
 

@@ -25,6 +25,7 @@ function register(data) {
       let token = res.data.token;
 
       dispatch(gptActions.getToken({ token }));
+      return token
     } catch (err) {
       console.error(err);
       dispatch(gptActions.errMsg({err}))
