@@ -2,12 +2,9 @@ import Navb from "./Pages/Navb";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import React, { useState } from "react";
-
 import Log from "./Pages/Log";
 import Register from "./Pages/Register";
-// import History from "./Pages/History";
 import { Route, Routes } from "react-router-dom";
-// import ClipLoader from "react-spinners/ClipLoader";
 import useLocalStorage from "./useLocalStorage";
 import Gpt from "./Pages/Gpt";
 
@@ -46,12 +43,6 @@ function App() {
           path="/login"
           element={<Log login={login} setLogin={setLogin} />}
         />
-        
-         
-
-       
-      
-          
       </Routes>
     </div>
   );

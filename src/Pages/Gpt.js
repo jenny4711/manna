@@ -28,7 +28,7 @@ function Gpt({ show, setShow, login }) {
     name: "",
     amt: "",
     item: "",
-    start_date:null,
+    start_date: null,
     start_time: "",
     end_date: null,
     end_time: "",
@@ -38,16 +38,15 @@ function Gpt({ show, setShow, login }) {
   const [message, setMessage] = useState("");
   const [chats, setChats] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
-  const [startDate, setStartDate] = useState(null);  
+  const [startDate, setStartDate] = useState(null);
   const [value, setValue] = useState(null);
-  const [startDate1, setStartDate1] = useState(null);  
+  const [startDate1, setStartDate1] = useState(null);
   const [value1, setValue1] = useState(null);
   const { msgs, info, user } = useSelector((state) => state.gpt);
 
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
-
     setMessage(`You are promotion post creator. 
        create a ${form.campaign_type} promotion post. 
        The business name is ${form.name}, 
@@ -57,8 +56,8 @@ function Gpt({ show, setShow, login }) {
        Starting time is ${value},
         Until ${startDate1},
         Ending time is ${value1}  `);
-console.log(value1,value,'dddddvalues')
-console.log(form,'form')
+    console.log(value1, value, "dddddvalues");
+    console.log(form, "form");
     setForm({
       name: "",
       amt: "",
@@ -68,10 +67,10 @@ console.log(form,'form')
       end_date: startDate1,
       end_time: value1,
     });
-    setStartDate(null)
-    setValue(null)
-    setStartDate1(null)
-    setValue1(null)
+    setStartDate(null);
+    setValue(null);
+    setStartDate1(null);
+    setValue1(null);
   };
 
   const handleFormChange = (fieldName, value) => {
@@ -79,16 +78,16 @@ console.log(form,'form')
       ...prevForm,
       [fieldName]: value,
     }));
-    console.log('hey')
+    console.log("hey");
   };
 
   const chat = async (e, message) => {
     e.preventDefault();
-    console.log(e,'eeeeeeeeeeeee')
-    console.log(value,value1,'times')
+    console.log(e, "eeeeeeeeeeeee");
+    console.log(value, value1, "times");
     setIsTyping(true);
     let msgs = chats;
-   
+
     setMessage({ role: "user", content: message });
     setChats(msgs);
 

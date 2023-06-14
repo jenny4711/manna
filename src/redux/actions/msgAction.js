@@ -8,12 +8,10 @@ function login(data) {
       const res = await axios.post(`${url}/auth/token`, data);
       let token = res.data.token;
       dispatch(gptActions.getToken({ token, data }));
-      return token
-
-    
+      return token;
     } catch (err) {
       console.error(err);
-      dispatch(gptActions.errMsg({err}))
+      dispatch(gptActions.errMsg({ err }));
     }
   };
 }
@@ -25,10 +23,10 @@ function register(data) {
       let token = res.data.token;
 
       dispatch(gptActions.getToken({ token }));
-      return token
+      return token;
     } catch (err) {
       console.error(err);
-      dispatch(gptActions.errMsg({err}))
+      dispatch(gptActions.errMsg({ err }));
     }
   };
 }
@@ -58,10 +56,8 @@ function postMsg(user_id, msg) {
       user_id: user_id,
       msg: msg,
     };
-   
 
     try {
-      
       const res = await axios.post(`${url}/history`, obj);
       dispatch(gptActions.postMsgs(res.data.res));
     } catch (err) {
@@ -70,26 +66,17 @@ function postMsg(user_id, msg) {
   };
 }
 
-function removeItem(id){
-  return async (dispatch,getState)=>{
-    try{
-      const res=await axios.delete(`${url}/history/${id}`)
-     
-      dispatch(gptActions.removeC(res.data))
-     
-       
-    }catch(err){
-      console.error(err)
-      dispatch(gptActions.errMsg({err}))
+function removeItem(id) {
+  return async (dispatch, getState) => {
+    try {
+      const res = await axios.delete(`${url}/history/${id}`);
+
+      dispatch(gptActions.removeC(res.data));
+    } catch (err) {
+      console.error(err);
+      dispatch(gptActions.errMsg({ err }));
     }
-  
-
-
-  }
+  };
 }
 
-
-
-
-
-export const gptAction = { login, register, getMsg, postMsg,removeItem };
+export const gptAction = { login, register, getMsg, postMsg, removeItem };

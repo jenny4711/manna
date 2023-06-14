@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { gptAction } from "../redux/actions/msgAction";
 import useLocalStorage from "../useLocalStorage";
-import FloatingLabel from "react-bootstrap/FloatingLabel";
+
 import Form from "react-bootstrap/Form";
 import "../CSS/Log.css";
 
@@ -16,7 +16,7 @@ const Log = ({ login, setLogin }) => {
   const [data, setData] = useState(sample);
   const [item, setItem] = useState(sample);
   const [getToken, setGetToken] = useLocalStorage("token", "");
-  const { info, token,err } = useSelector((state) => state.gpt);
+  const { info, token, err } = useSelector((state) => state.gpt);
   const navigate = useNavigate();
 
   const handleChange = async (e) => {
@@ -26,60 +26,31 @@ const Log = ({ login, setLogin }) => {
       ...data,
       [name]: value,
     }));
-   
   };
 
-
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   setItem(sample);
-  
-  //   dispatch(gptAction.login(data));
-  //   dispatch(gptAction.getMsg(data.email));
-  //   setGetToken(token);
-  //   console.log(info.password,'pwd')
-  //   console.log(getToken,'tk')
-  //   if (token !== null) {
-  //     navigate(`/:${info.email}`);
-  //     setLogin(true);
-  //   } else {
-  //     navigate("/");
-  //   }
-   
-  // };
   const handleSubmit = async (e) => {
     e.preventDefault();
     setItem(sample);
-  
+
     try {
-      let res=await dispatch(gptAction.login(data));
-      if(!res){
-        navigate('/')
-      }else{
+      let res = await dispatch(gptAction.login(data));
+      if (!res) {
+        navigate("/");
+      } else {
         await dispatch(gptAction.getMsg(data.email));
         setGetToken(token);
         navigate(`/${data.email}`);
         setLogin(true);
       }
-      console.log(!res,'res')
-    
-     
-     
-      console.log(info.password, 'pwd');
+      console.log(!res, "res");
+
+      console.log(info.password, "pwd");
       console.log(getToken);
-  
-      
-      
     } catch (error) {
-      // 실패한 경우의 처리
       console.log(error);
       navigate("/");
     }
   };
-  
-  
-
 
   return (
     <div className="Log">

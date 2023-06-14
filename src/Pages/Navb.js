@@ -50,7 +50,7 @@ const Navb = ({ login, setShow, logOut }) => {
           </Nav.Link>
           <Nav.Link
             onClick={(e) => showHistory(e)}
-            className={!login? "hide" : ""}
+            className={!login ? "hide" : ""}
             href="#history"
           >
             History
