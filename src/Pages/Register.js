@@ -3,8 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { gptAction } from '../redux/actions/msgAction';
 import '../CSS/Log.css'
 import Form from 'react-bootstrap/Form';
+import { useNavigate } from "react-router-dom";
+import useLocalStorage from "../useLocalStorage";
 
-const Register = () => {
+const Register = ({setLogin}) => {
   let sample={
     email:"",
     password:""
@@ -12,6 +14,11 @@ const Register = () => {
   const dispatch=useDispatch()
   const [info,setInfo]=useState(sample)
   const[item,setItem]=useState(sample)
+  const {  token } = useSelector((state) => state.gpt);
+  const [getToken, setGetToken] = useLocalStorage("token", "");
+  const navigate = useNavigate();
+  console.log(info,'register info') 
+  console.log(token,'register info')
 
   const handleChange = async (e)=>{
     const {name,value}=e.target;
@@ -25,6 +32,17 @@ const Register = () => {
     e.preventDefault();
     setInfo(sample);
     dispatch(gptAction.register(info))
+  
+    setGetToken(token);
+   
+    if (token !== null) {
+      const email = info.email || "";
+      navigate(`/:${email}`);
+      setLogin(true);
+    } else {
+      navigate("/");
+    }
+    
   }
 
 

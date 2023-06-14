@@ -41,7 +41,7 @@ function App() {
             />
           }
         />
-        <Route path="/register" element={<Register />} />
+        <Route path="/register" element={<Register setLogin={setLogin} />} />
         <Route
           path="/login"
           element={<Log login={login} setLogin={setLogin} />}

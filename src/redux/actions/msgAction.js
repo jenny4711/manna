@@ -7,10 +7,13 @@ function login(data) {
     try {
       const res = await axios.post(`${url}/auth/token`, data);
       let token = res.data.token;
-
       dispatch(gptActions.getToken({ token, data }));
+      return token
+
+    
     } catch (err) {
       console.error(err);
+      dispatch(gptActions.errMsg({err}))
     }
   };
 }
@@ -24,6 +27,7 @@ function register(data) {
       dispatch(gptActions.getToken({ token }));
     } catch (err) {
       console.error(err);
+      dispatch(gptActions.errMsg({err}))
     }
   };
 }
@@ -75,6 +79,7 @@ function removeItem(id){
        
     }catch(err){
       console.error(err)
+      dispatch(gptActions.errMsg({err}))
     }
   
 

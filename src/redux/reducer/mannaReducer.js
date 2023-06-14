@@ -6,8 +6,8 @@ let initialState={
   loading:true,
   user:[],
   show:true,
-  result:[]
-  
+  result:[],
+  err:null
 }
 
 const msgSlice=createSlice({
@@ -30,6 +30,9 @@ const msgSlice=createSlice({
     },
     removeC(state,action){
       state.result=action.payload.res
+    },
+    errMsg(state,action){
+      state.err=action.payload.err
     }
     
     

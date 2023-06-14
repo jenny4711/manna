@@ -163,7 +163,7 @@ console.log(form,'form')
                   </p>
                   <CopyToClipboard text={ch.content}>
                     <button
-                      onClick={() => copyText()}
+                      onClick={copyText}
                       className={chats.length > 0 ? "" : "hide"}
                     >
                       {" "}
