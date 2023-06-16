@@ -15,7 +15,7 @@ function App() {
   const [user, setUser] = useState([]);
 
   const [show, setShow] = useState(false);
-
+console.log(login,'app')
   const logOut = () => {
     setLogin(false);
     setToken("");

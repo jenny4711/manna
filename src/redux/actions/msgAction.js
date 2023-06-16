@@ -11,7 +11,9 @@ function login(data) {
       return token;
     } catch (err) {
       console.error(err);
-      dispatch(gptActions.errMsg({ err }));
+        dispatch(gptActions.errMsg({ err }));
+      return err;
+    
     }
   };
 }

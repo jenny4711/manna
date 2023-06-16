@@ -25,7 +25,7 @@ const Navb = ({ login, setShow, logOut }) => {
       navigate("/");
     }
   };
-
+console.log(login)
   const showHistory = (e) => {
     e.preventDefault();
     setShow((s) => (s === true ? false : true));

@@ -13,7 +13,7 @@ const useLocalStorage =(key,defaultValue)=>{
     }
     return currentValue;
   });
-console.log(value,'use')
+// console.log(value,'use')
   useEffect(()=>{
     localStorage.setItem(key,JSON.stringify(value));
   },[value,key])

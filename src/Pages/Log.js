@@ -34,21 +34,19 @@ const Log = ({ login, setLogin }) => {
 
     try {
       let res = await dispatch(gptAction.login(data));
-      if (!res) {
-        navigate("/");
+      if (res?.response?.status === 500) {
+        alert("Try again!");
+        return navigate("/login");
       } else {
         await dispatch(gptAction.getMsg(data.email));
         setGetToken(token);
-        navigate(`/${data.email}`);
         setLogin(true);
+        return navigate(`/${data.email}`);
       }
-      console.log(!res, "res");
-
-      console.log(info.password, "pwd");
-      console.log(getToken);
     } catch (error) {
       console.log(error);
-      navigate("/");
+      alert(error?.data.error);
+      return navigate("/login");
     }
   };
 
